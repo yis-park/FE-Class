@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>배경색 background-color</title>
+    <!-- 내부 선언 -->
+    <style>
+        body {color :brown;
+            background-color: bisque;} /* 부모의 색으로 상속받기 때문에 전부다 색이 바뀌었음.*/
+        h1 {color:#6ba;
+            background-color: #e1e1e1;}
+        h2 {background-color: #f69;}
+        p {background-color: orange;}
+        #txt2 {color: blue;} /* 아이디 선택자*/
+        .txt {/*클래스 선택자: 한 문서 안에서 같은 이름을 여러 번 사용할 수 있기 때문에 주로 꾸밈 값을 줄 때나 공통된 값 적용시 사용 */
+            background-color: lightskyblue;}
+        /* p(타입)와 .txt(클래스 선택자)가 같은 범위인데 .txt로 적용됨.
+        선택자들에겐 적용 우선 순위가 있으며 클래스 선택자는 타입 선택자보다 우선 적용됨.*/
+    </style>
+</head>
+<body>
+    <h1 class="txt1">배경색 background-color</h1>
+    <h2>한글 입숨</h2>
+    <p id="txt1" class="txt">
+    전인 평화스러운 작고 뜨고, 따뜻한 찬미를 이성은 이것은 예수는 듣는다. 내는 내려온 장식하는 우리의 봄바람이다. 동산에는 위하여, 피고, 그리하였는가? 스며들어 미인을 열매를 그들은 생명을 가슴에 안고, 보이는 노년에게서 때문이다.</p>
+    <p id="txt2" class="txt">속에 긴지라 같으며, 인간에 얼마나 같은 트고, 천자만홍이 피다. 싸인 동산에는 일월과 말이다. 어디 우리 타오르고 것이다. 것이 하는 투명하되 것이다. 천자만홍이 보이는 아니더면, 옷을 부패뿐이다. 싹이 이것이야말로 할지니, 있으랴?</p>
+</body>
+</html>

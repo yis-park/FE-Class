@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>formEx1</title>
+</head>
+<body>
+    <h1>폼 연습1</h1>
+    <form action="">
+        <section>
+            <fieldset>
+                <legend>상세정보 :</legend>
+                <label>이름 : <input type="text" name="user_name" required></label>
+                <label for="">이메일 : <input type="email" name="user_email"></label>
+            </fieldset>
+        </section>
+
+        <section>
+            <fieldset>
+                <legend>리뷰 : </legend>
+                <p><label> 사이트를 알게 된 경위는?</label></p>
+                <p>
+                    <select name="user_site">
+                        <option value="인터넷광고">인터넷광고</option>
+                        <option value="sns">sns</option>
+                        <option value="네이버블로그">네이버블로그</option>
+                    </select>
+                </p>
+                <hr>
+
+                <p><label> 다시 방문하시겠습니까?</label>
+                    <input type="radio" value="네" checked>네
+                    <input type="radio" value="아니요">아니요
+                    <input type="radio" value="모름">모름
+                </p>
+                <hr>
+
+                <label>의견 : </label><textarea name="txtBox" rows="2">여러 줄의 텍스트 박스
+                </textarea>
+                <hr>
+
+                <p><input type="checkbox" value="이메일 업데이트에 가입" checked>이메일 업데이트에 가입</p>
+                <hr>
+                
+                <button type="submit" value="가입">리뷰 전송</button>
+                <button type="reset" value="취소">전송 취소</button>
+            </fieldset>
+        </section>
+    </form>
+</body>
+</html>

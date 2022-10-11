@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+body{
+    color: #555;
+    font-size: 15px;
+}
+#sec1{
+    background-color: lightgray;
+    text-align: center;
+}
+h1 {
+    background-color: #000;
+    color: #fff;}
+#txt1{
+    color: brown;
+    text-decoration: underline;
+}
+#txt2{
+    line-height: 30px;
+}
+#txt3{
+    font-size: 13px;
+    color: red;
+}
+a{
+    background-color: orange;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+a:hover{
+    background-color: lightcoral;
+    color: #000000;
+    text-decoration: line-through;
+}
+#txt4{
+    color: purple;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+.txt5{
+    background-color: #099 ;
+    color: #fff;
+    text-align: right;
+    font-weight: bold;
+}
+#txt6{
+    font-weight: bold;
+}
+.li{
+    background-color: orange;
+}
+.Ex{
+    font-size: 12px;
+    color: red;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form 연습2</title>
+</head>
+<body>
+    <h1>form 연습2</h1>
+    <form>
+        <table border="1">
+            <caption>실습 예제</caption>
+            <tr>
+                <th><label for="school_search">학교</label></th>
+                <td colspan="2"><input type="search" name="school_search" id="school_search"></td>
+                <td><button type="submit">학교 찾기</button></td>
+            </tr>
+            <tr>
+                <th>담당학년</th>
+                <td colspan="3">
+                   <select name="grade" id="grade">
+                        <option>-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                        <label for="grade">학년</label>
+                    
+                    <select name="class"> 
+                        <option value="-">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <label for="class">반</label>
+                </td>
+                
+            </tr>
+            <tr>
+                <th>학교전화</th>
+                <td>
+                    <select name="school_code">
+                    <option>지역번호</option>
+                    <option value="경기">031</option>
+                    <option value="서울">02</option>
+                </td>
+                <td>-</td>
+                <td><input type="tel" name="shool_tel"></td>
+            </tr>
+            <tr>
+                <th><label for="school_phone">휴대전화</label></th>
+                <td>010</td>
+                <td>-</td>
+                <td><input type="search" name="search"></td>
+            </tr>
+            <tr>
+                <th rowspan="3">교사인증</th>
+                <td colspan="3"><input type="file" name="user_file" accept="png, gpg, gpeg, pdf"></td>
+            </tr>
+            <tr>
+                <td colspan="3">*교사 인증은 교육 행정 정보시스템 로그인 한 다음 화면 캡처해서 첨부해 주시면 됩니다.</td>
+            </tr>
+            <tr>
+                <td colspan="3"><a href="https://www.naver.com" target="_blank">{{&gt;자세한 방법 보기&lt;}}</a></td>
+            </tr>
+            <tr>
+                <th rowspan="2">간단한 인사 및 소개</th>
+                <td colspan="3">
+                    <textarea name="txtBox" id="txtBox" rows="2" disabled>이곳에 작성하세요</textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3">간단한 인사 및 소개를 남겨 주시면 교내 사랑방 게시판에 자동 등록되어 집니다.</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

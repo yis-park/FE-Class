@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+body {
+    font-family: '돋움','나눔고딕', '맑은 고딕', sans-serif;
+    font-size: 16px;
+}
+#txt1 {
+    font-weight: bold;
+    font-size: 14px;
+    color: blue;
+} 
+
+#txt2 {
+    font-family: '굴림', sans-serif;
+    font-style: italic;
+    color: #e8334d;
+}
+
+#txt3 {
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+#txt4 {
+    font-size: 15px;
+    text-indent: 10px;
+}
+
+#txt5 {
+    font-weight: bold;
+    color: green;
+    line-height: 50px;
+}
+
+#txt6 {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+}
