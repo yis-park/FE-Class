@@ -3,6 +3,8 @@
 body{
     color: #555;
     font-size: 15px;
+    font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+    line-height: 1.6;
 }
 #sec1{
     background-color: lightgray;
