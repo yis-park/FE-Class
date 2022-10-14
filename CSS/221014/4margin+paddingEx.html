@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>margin paddingEx</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            
+        }
+        h1 {
+            font-family: "휴먼편지체";
+            border-radius: 20px  20px 0 0;
+            background-color: skyblue;
+            border-bottom: solid 8px midnightblue ;
+            color: #fff;
+            padding: 15px;
+            width: 400px;
+            margin: 10px auto ;
+            min-width: 350px;
+        }
+        h2 {
+            text-decoration: line-through;
+        }
+        ul>li {
+            border: 1px solid #000;
+            width: 400px;
+            padding: 10px;
+            margin: 10px auto;          
+            text-align: left;
+            max-width: 500px;
+
+        }
+        .link{
+            min-width: 400px;
+            max-width: 70%;
+            background-color: navy;
+            padding: 10px 0;
+            margin: 10px auto;
+  
+        }
+        .link a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .link:hover {
+            background-color: yellow;
+        }
+        a:hover{
+            color: black;
+        }
+
+        .wrapper {
+            min-width: 400px;
+            max-width: 70%;
+            margin: 50px auto;
+        }
+
+        .wrapper .site {
+            background-color: tomato;
+            border: 1px solid #fff;
+            /* 
+            "한 줄인 경우" 세로 중앙 정렬 방법
+            heiht와 line-heigh의 값을 동일하게 적용.
+            폰트 사이즈의 크기가 큰 경우는 잘 안됨.
+             */
+            height: 50px;
+            line-height: 50px;
+        }
+        .wrapper .site a {
+            color: inherit; /*부모가 가지고 있는 값을 상속받아 부모컬러 보여줌*/
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>margin padding 연습 1</h1>
+    <h2>조건</h2>
+    <ul>
+        <li>마우스 이벤트</li>
+        <li>사이트 새창으로 이동</li>
+        <li>중앙 정렬</li>
+    </ul>
+
+    <p class="link"><a href="http://naver.com" target="_blank">네이버</a></p>
+    <p class="link"><a href="http://google.com" target="_blank">구글</a></p>
+    <p class="link"><a href="http://daum.net" target="_blank">다음</a></p>
+
+    <div class="wrapper">
+        <div class="site"><a href="http://naver.com" target="_blank">네이버</a></div>
+        <div class="site"><a href="http://google.com" target="_blank">구글</a></div>
+        <div class="site"><a href="http://daum.net" target="_blank">다음</a></div>
+    </div>
+</body>
+</html>
