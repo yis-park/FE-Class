@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>box-sizing연습</title>
+    <style>
+        /* 가로 400 세로 200
+        요소 중앙정렬
+        바깥여백 위 20 아래 30 
+        안쪽여백 위 20 아래 20 오 30 왼 30
+        테두리 위10 아래 5 오 10 왼 10*/
+        .box {
+            width: 400px; height: 200px;
+            border: 10px #555 solid;
+            border-bottom-width: 5px;
+            padding: 20px 30px;
+            margin: 20px auto 30px;
+        }
+        .box1 {
+            box-sizing: content-box;
+        }
+        .box2 {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>box-sizing연습</h1>
+    <div class="box box1">
+        <h3>box-sizing: content-box</h3>
+        <p>w400 + m0 + p30+30 + b10+10 = 480px</p>
+    </div>
+    <div class="box box2">
+        <h3>box-sizing: border-box</h3>
+        <p>w400 + m0 = 400px</p>
+    </div>
+
+</body>
+</html>

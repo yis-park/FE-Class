@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>요소의 실제 크기 boxsizeEx3</title>
+    <style>
+        /* 가로 150 세로 200
+        요소 중앙 정렬
+        바깥여백 위 50
+        안쪽여백 위 10, 아래 50 오 50 왼 50
+        테두리 위 10 아래 5 왼 4 오 4*/
+        .box{
+            width: 150px; height: 200px;
+            border-top: 10px double salmon;
+            border-bottom: 5px solid teal;
+            border-left: 4px dodgerblue dotted;
+            border-right: 4px dodgerblue dotted;
+            background-color: #fef;
+            /* margin: 0 auto;
+            margin-top: 50px; */
+            margin: 50px auto 0;
+            padding: 10px 50px 50px 50px;
+            /* 줄바꿈 제어 */
+            word-break: normal; /*기본*/
+            word-break: break-all; /*영역에 맞춰 강제 줄바꿈. 영어 한정*/
+            word-break: keep-all;
+    </style>
+</head>
+<body>
+    <h1>요소의 실제 크기 box sizeEx3</h1>
+    <div class="box">
+        <p>가로:w150+ p50+50 + m0 + b4+4 = 258px</p>
+        <p>세로:h200 + p10+50 + m50 + b10+5 = 325px</p>
+
+        <p>한글입숨한글입숨한글입숨한글입숨한글입숨한글입숨한글입숨</p>
+    </div>
+</body>
+</html>
