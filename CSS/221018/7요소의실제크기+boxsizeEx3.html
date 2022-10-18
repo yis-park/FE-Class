@@ -21,10 +21,12 @@
             margin-top: 50px; */
             margin: 50px auto 0;
             padding: 10px 50px 50px 50px;
-            /* 줄바꿈 제어 */
+             word-wrap: break-word; 
+
+            /* 어절 기준 줄바꿈 제어 */
             word-break: normal; /*기본*/
-            word-break: break-all; /*영역에 맞춰 강제 줄바꿈. 영어 한정*/
-            word-break: keep-all;
+            word-break: break-all; /*어절에 맞춰 줄바꿈. 영어 한정*/
+            word-break: keep-all; /*어절을 유지하며 줄바꿈. 한글 한정*/
     </style>
 </head>
 <body>
