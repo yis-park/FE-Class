@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: #efefef;
+}
+.container { /*w980+ m0 +p10+10 +b4+4 =1008*/
+    max-width: 980px;
+    /*min-width : 952px; w980+ m0 +p10+10 +b4+4 =1008*/
+    min-width: 600px;
+
+    box-sizing: border-box;
+    border: double 4px #000;
+    background-color: #fff;
+    margin: 18px auto;
+
+    padding: 30px 10px 60px;
+ 
+}
+
+.container h1 {
+    /*background-color: orange;
+    text-align: center; 첫번째 중앙정렬 방법*/
+    width: 150px; /*두번째 중앙정렬 방법. (블록요소) h1 값 자체를 로고사이즈로 주고 마진값 0 auto*/
+    margin: 0 auto;
+}
+.container #gnb {
+    /* text-align: center; li가 인라인블록이기 때문에 li가 중앙 정렬 됨*/
+    width: 522px;
+    margin: 20px auto;
+
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 14px 38px; 
+    
+}
+.container #gnb li {
+    display: inline-block;
+    /* margin: 10px 20px;  첫번째 
+    padding: 10px 20px; 두번째 패딩이나 마진이나 배경색 없어서 상관없음.*/
+    width: 100px;
+    /* background-color: gold; */
+    text-align: center;
+}
+.container #gnb li a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+}
+
+.container #gnb li a:hover,
+.container #gnb li.active a{
+    color: red;
+}
+
+.container figure {
+    /* background-color: orange; */
+    width: 600px;
+    margin: 0 auto;
+    text-align: right;
+}
+.container figure figcaption {
+    text-align: right;
+    display: inline; /* 피규어 안에 이미지도 피캡션도 모두 인라인(인라인블럭)으로 바뀜 text-align 영향받음*/
+    background-color: #000;
+    color: #fff;
+    line-height: 2; /*위아래 여백 줄 수 있음.*/
+    
+}
+
+.container p {
+    width: 48.9795%;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.4;
+   
+}
