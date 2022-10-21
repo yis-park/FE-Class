@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>table style 연습2</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+            text-align: center;
+            margin: 0 auto;
+            
+        }
+        caption {
+            background-color: rgb(21, 117, 96);
+            color: #5d5d5d;
+            font-weight: bold;
+            font-size: 20px;
+            height: 40px;
+            line-height: 40px;
+        }
+        td {
+            border: 2px solid rgb(21, 117, 96);
+            background-color: rgb(255, 208, 53);
+            width: 150px;
+            padding: 5px;
+        }
+        tr .blank {
+            background-color: #fff;
+        }
+        tr .cowleg {
+            background-color: hotpink;
+            border-top-width: 6px;
+        }
+        span {
+            background-color: red;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>table style 연습2</h1>
+    <table>
+        <caption>소 cow</caption>
+        <thead>
+            <tr>
+                <td>소머리</td>
+                <td>목심</td>
+                <td><dt>등심</dd>
+                <dt>(살치살 &middot; <span>꽃등심</span>)</dt></td>
+                <td>채끝살</td>
+                <td><dt>우둔</dt>
+                    <dt>(홍두깨살)</dt>
+                </td>
+            </tr>
+        <tr>
+            <td  class="blank" rowspan="4"></td>
+            <td rowspan="2"><dt>앞다리</dt>
+                <dt>(부채살)</dt></td>
+            <td><dt>갈비</dt>
+                <dt>(안창살 &middot; 제비추리)</dt></td>
+            <td>안심</td>
+            <td rowspan="2"><dt>설도</dt>
+                <dt>(도가니살)</dt></td>
+        </tr>
+        <tr>
+            <td colspan="2"><dt>양지</dt>
+                <dt>(차돌박이 &middot; 우삼겹)</dt></td>
+          
+        </tr>
+        <tr>
+            <td>사태</td>
+            <td class="blank" colspan="2" rowspan="2"></td>
+            <td><dt>사태</dt>
+                <dt>(아롱사태)</dt></td>
+        </tr>
+        <tr>
+            <td class="cowleg">우족</td>
+            <td class="cowleg">우족</td>
+        </tr>
+
+        </thead>
+    </table>
+
+</body>
+</html>

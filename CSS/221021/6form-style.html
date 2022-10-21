@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>form style</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sunflower&display=swap');
+        form {
+            background-color: #eee;
+            padding: 50px;
+            /* margin: 20px; */
+            width: 300px; 
+            margin: 20px 50px;
+            font-family: '경기천년바탕';
+        }
+        form *{
+            font-family: 'Sunflower', sans-serif;
+        }
+        fieldset {
+            border-radius: 20px;
+            border-color: rgb(0, 97, 89);
+            background-color: rgb(253, 253, 212);
+        }
+        legend {
+            background-color:rgb(0, 97, 89);
+            color: #fff;
+            padding: 5px 30px;
+            font-size: 18px;
+        }
+        p {
+            color: rgb(0, 97, 89);
+            text-align: center;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid;
+            background-color: rgb(253, 253, 212);
+        }
+        input:hover{
+            background-color: pink;
+        }
+        button {
+            display: inline-block;
+            background-color:rgb(0, 97, 89);
+            color: #fff;
+            border: none;
+            padding: 5px 7px;
+            margin: 3px;
+            
+        }
+        button:hover{
+            background-color: lightskyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <section>
+            <fieldset>
+                <legend>회원가입</legend>
+                <p>
+                    <label for="user_name">이름:
+                        <input type="text" id="user_name" >
+                    </label>
+                </p>
+                <p>
+                    <label for="user_email">이메일:
+                        <input type="email" id="user_email">
+                    </label>
+                    
+                </p>
+                <p class="button">
+                <button type="submit"style="float:right" value="가입">가입</button>
+                <button type="reset" style="float:right"value="취소">취소</button>
+                </p>
+            </fieldset>
+        </section>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>table-styleEx4</title>
+    <style>
+        /* h1{
+            text-align: center;
+        }
+        table {
+            margin: 50px auto;
+            background-color: #fff;
+            line-height: 1.7;
+            border: 3px solid pink;
+            font-size: 25px;
+
+        }
+        table caption{
+            background-color: pink;
+            border-radius: 20px 20px 0 0;
+            padding: 8px;
+            font-weight: bold;
+
+        }
+        table th,table td {
+            width: auto;
+            padding: 10px 50px;
+        }
+        table th{
+            font-weight: bold;
+        }
+
+        .fir th,.fir td{
+            border: 2px dotted pink;
+        }
+        .sec th,.sec td{
+            border: 1px dashed pink;
+            border-spacing: 0;
+            border-collapse: collapse;
+        } */
+        h1 {
+            text-align: center;
+        }
+        table {
+            margin: 0 auto 50px;
+            border: 3px solid pink;
+        }
+        table caption {
+            background-color:pink;
+            color: #fff;
+            padding: 8px;
+            border-radius: 20px 20px 0 0;
+        }
+        table th,  table td {
+            border: 1px solid lightcoral;
+            padding: 10px 50px;
+        }
+        .fir {
+            border-spacing: 5px;
+        }
+        .fir tr > *{
+            border-style: dotted;
+        }
+        .sec {
+            border-collapse: collapse;
+        }
+        .sec tr > *{
+            border-style: dashed;
+        }
+    </style>
+</head>
+<body>
+    <h1>table style연습4</h1>
+    <table class="fir">
+        <caption>프로축구 경기 일정</caption>
+        <tbody>
+        <tr>
+            <th>울산</th>
+            <td>울산 vs 인천</td>
+        </tr>
+        <tr>
+            <th>부산</th>
+            <td>부산 vs 대전</td>
+        </tr>
+        <tr>
+            <th>서울</th>
+            <td>서울 vs 강원</td>
+        </tr>
+    </tbody>
+    </table>
+    <table class="sec">
+        <caption>프로축구 경기 일정</caption>
+        <tbody>
+        <tr>
+            <th>울산</th>
+            <td>울산 vs 인천</td>
+        </tr>
+        <tr>
+            <th>부산</th>
+            <td>부산 vs 대전</td>
+        </tr>
+        <tr>
+            <th>서울</th>
+            <td>서울 vs 강원</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
