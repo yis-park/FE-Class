@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>positionEx1</title>
+    <style>
+        .wrapper{
+            width: 400px; height: 400px;
+            background-color: tomato;
+            margin: 50px auto;
+            list-style: none;
+            padding: 0;
+
+            /* 기준 위치 특성을 쓰지 않는 이상 기존의 흐름을 유지한 채 li 포지션의 기준이 될 수 있기 때문 */
+            position: relative;
+            /* top: 100px; right: 100px; */
+
+        }
+
+        .wrapper .box {
+            width: 50px; height: 50px;
+            line-height: 50px;
+            background-color: gold;
+            font-size: 20px; font-weight: bold;
+            text-align: center;
+
+            /* 나와 가까운 부모 요소에 포지션이 적용되어 있으면 그 부모를 기준으로 위치 설정 */
+            position: absolute;
+
+        }
+        .wrapper .box1{
+            top: 0; left: 0;
+        }
+        .wrapper .box2{
+            top: 0; right: 0;
+        }
+        .wrapper .box3{
+            bottom: 0; left: 0;
+        }
+        .wrapper .box4{
+            bottom: 0; right: 0;
+        }
+        .wrapper .box5{
+            /* left:50%; top:50%; */
+            left: 175px; top: 175px;
+            margin-left:-25px; margin-top: -25px;
+        }
+        /* 포지션이 적용된 경우 중앙정렬
+        1. relative의 경우 위치 속성이 없으면 margin 으로 중앙 ㅈ어렬 가능
+        2. absolute, fixed 경우, margin으로 중앙 정렬 안됨
+            ㄴ 위치 속성 값을 50%, 같은 방향의 margin 값을 -로 부여
+             top :50%; left:50%; margin-top:-1/2px; margin-left:-1/2px;
+             ㄴ top:0; right:0; bottom:0; right:0; margin:0;
+        */
+    </style>
+</head>
+<body>
+    <ul class="wrapper">
+        <li class="box box1">1</li>
+        <li class="box box2">2</li>
+        <li class="box box3">3</li>
+        <li class="box box4">4</li>
+        <li class="box box5">5</li>
+    </ul>
+</body>
+</html>

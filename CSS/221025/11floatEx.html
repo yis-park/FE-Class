@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>floatEx</title>
+    <style>
+
+        ul {
+            padding: 0;
+            margin: 0 auto;
+            list-style: none;
+            font-weight: bold;
+            font-size: 20px;
+            width: 600px;
+        }
+
+        .menu1 {
+            padding: 20px 30px;
+            margin: 0 auto;
+            float: left;
+            border: 2px solid #000;
+            border-radius: 40px 0 0 40px;
+        }
+        .menu2 {
+            padding: 20px 30px;
+            margin: 0 auto;
+            float: left;
+            border: 2px solid #000;
+        }
+        .menu4{
+            padding: 20px 30px;
+            margin: 0 auto;
+            float: left;
+            border: 2px solid #000;
+            border-radius: 0 40px 40px 0;
+        }
+        ul li {
+            
+            border-collapse: collapse;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        .menu:hover{
+            background-color: tomato;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- display:inline-block 사용금지 -->
+    <ul id="gnb" class="clearFix">
+        <li><a href="#" class="menu menu1">메뉴1</a></li>
+        <li><a href="#" class="menu menu2">메뉴2</a></li>
+        <li><a href="#" class="menu menu2">메뉴3</a></li>
+        <li><a href="#" class="menu menu4">메뉴4</a></li>
+    </ul>
+</body>
+</html>

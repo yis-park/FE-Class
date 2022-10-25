@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-indexEx</title>
+  <style>
+    #wrapper {
+      list-style: none;
+      background-color: #ddd;
+      padding: 0;
+      margin:50px auto;
+      width: 400px; height: 400px;
+      font-weight: bold; font-size: 30px;
+
+      position: relative;
+    }
+    #wrapper .box {
+      width:200px; height: 200px;
+      position: absolute;
+      /* opacity: 0.7; */
+    }
+    #wrapper .box1 { 
+      background-color: #F94892; 
+      top:10px; left:10px;
+      z-index: 999;
+    }
+    #wrapper .box2 { 
+      background-color: #FF7F3F; 
+      top:40px; left:40px;
+      z-index: 99;
+    }
+    #wrapper .box3 { 
+      background-color: #FBDF07; 
+      top:80px; left:80px;
+      z-index: 9;
+    }
+    #wrapper .box4 { 
+      background-color: #89CFFD; 
+      top:120px; left:120px;
+    }
+  </style>
+</head>
+<body>
+  <ul id="wrapper">
+    <li class="box box1">box1</li>
+    <li class="box box2">box2</li>
+    <li class="box box3">box3</li>
+    <li class="box box4">box4</li>
+  </ul>
+</body>
+</html>
