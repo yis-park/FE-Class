@@ -52,7 +52,8 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 4px 10px rgb(10, 10, 10,.6);
 }
 #gnb li {
-  /* display: inline-block; */
+  /* display: inline-block; 이건 빈 공간이 생김*/
+  text-transform: uppercase;
 }
 #gnb li a {
   text-decoration: none;

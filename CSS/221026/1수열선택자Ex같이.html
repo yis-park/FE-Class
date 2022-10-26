@@ -13,37 +13,39 @@
             font-size: 20px;
             font-weight: bold;
             text-align: center;
-            width: 720px;
+            width: 80%;
 m
         }
         #gnb li {
             float: left;
-            width: 80px;
-            
-            background-color: #ddd;
+            width: 11.11111%; /*줄바꿈 없이 비율을 조정하고 싶을 때*/
+
         }
 
         #gnb li a{
-            text-align: center;
             text-decoration: none;
-            color: #fff;
+            color: inherit;
             display: block;
-            padding: 10px 0;
+            height: 50px; line-height: 50px;
             
         }
-        #gnb .left_round {
+        #gnb li:first-child a{
             border-radius: 40px 0 0 40px;
         }
-        #gnb .right_round {
+        #gnb li:last-child a{
             border-radius: 0 40px 40px 0;
         }
 
-        #gnb li:nth-child(even) { 
+        #gnb li:nth-child(even) a { /*2n도 가능, 2n+2 */
         background-color: #6060c9;}
-        #gnb li:nth-child(4n+1) { 
+
+        #gnb li:nth-child(4n+1) a{ 
         background-color: hsl(197, 49%, 58%);}
 
-        #gnb li:nth-child(4n+1):hover{
+        #gnb li:nth-child(4n+3) a{ 
+            background-color: pink;}
+            
+        #gnb li:nth-child(4n+1):hover a{
             background-color: hsl(240, 7%, 23%);
         } 
         
@@ -55,7 +57,7 @@ m
     ul과 li a를 사용해서 중앙정렬
 -->
 <ul id="gnb">
-    <li class="left_round"><a href="#">1</a></li>
+    <li><a href="#">1</a></li>
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
     <li><a href="#">4</a></li>
@@ -63,7 +65,7 @@ m
     <li><a href="#">6</a></li>
     <li><a href="#">7</a></li>
     <li><a href="#">8</a></li>
-    <li class="right_round"><a href="#">9</a></li>
+    <li><a href="#">9</a></li>
 </ul>
 </body>
 </html>

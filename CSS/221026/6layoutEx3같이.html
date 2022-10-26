@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>layoutEx3</title>
+    <style>
+      body {
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      ul li{
+        float: left;
+      }
+      .box{ /*래퍼에 세로중앙정렬 할때 사용했던 것. 최종본엔 지웠음*/
+        margin: 30px auto;
+        width: 940px;
+        height: 60px; line-height: 60px;
+      }
+      nav{
+        background-color: hsl(266, 75%, 76%);
+      }
+      nav #gnb{
+        /* background-color: #ddd; */
+        width: 600px;
+        margin: 0 auto;
+      }
+      /* .clearfix 적용하고자 하는 값의 부모요소에 적용시켜야 함. 부모요소의 높이값 주는 방법 */
+      nav #gnb::after{
+      content: "";
+      display: block;
+      clear: both;
+      }
+      nav #gnb a{
+        display: block;
+        color: #fff;
+        width: 120px;
+      }
+      nav #gnb a:hover {
+        background-color: tomato;
+      }
+     
+      article.box{
+        background-color: lightskyblue;
+        height: 100px; line-height: 100px;
+      }
+      article h2{
+        margin: 0;
+      }
+      #wrapper{
+        overflow: hidden; /*또는 clearfix로 높이값 주기*/
+        width: 940px;
+        margin: 0 auto;
+      }
+      #wrapper li{
+        background-color: #f5ff70;
+        width: 300px;
+        padding: 20px 0;
+      }
+      #wrapper li:nth-child(2){
+        margin: 0 20px;
+      }
+      footer {
+        background-color: pink;
+      }
+    </style>
+</head>
+<body>
+    <h1>로고</h1>
+
+    <nav class="box">
+        <ul id="gnb">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">상품</a></li>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">서비스</a></li>
+            <li><a href="#">연락처</a></li>
+        </ul>
+    </nav>
+    <article class="box">
+        <h2>컨텐츠</h2>
+    </article>
+    <ul id="wrapper">
+        <li>1번째 열</li>
+        <li>2번째 열</li>
+        <li>3번째 열</li>
+    </ul>
+    <footer class="box">
+        &copy;copyright 2022
+    </footer>
+</body>
+</html>

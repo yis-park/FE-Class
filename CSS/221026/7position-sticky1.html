@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position : sticky 1</title>
+    <style>
+        body,h1, h2{
+            margin: 0;
+            color: #fff;
+        }
+
+        header, footer {
+            background-color: rgb(15, 104, 92);
+            
+            height: 100px;
+            padding: 10px;
+        }
+        main{
+            background-color: #ddd;
+            /* overflow: hidden; */
+        }
+        /* 
+            main::after{} / overflow:hidden  .clearfix::after대신 쓸수있는 값*/
+
+        /* 미리 만들어놓은 다음 필요할 때마다 html에 적용해 사용하기 위해서 */
+        .clearFix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        main article {
+            width: 70%;
+            height: 2000px;
+            background-color: #ffc62a;
+            float: left;
+        }
+        main aside {
+            background-color:pink;
+            width: 30%; height: 150px;
+            float: left;
+            position: sticky;
+            /* 1.부모 요소들 중 overflow:hidden이 적용되어 있으면 작동하지 않음.
+            2.height값이 %인 경우도 작동하지 않음.*/
+            top: 0;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>position:sticky</h1>
+        <h2>header</h2>
+    </header>
+
+    <main class="clearFix">
+        <article>
+            <h2>main contents</h2>
+        </article>
+        <aside>
+            <h2>sticky sidebar</h2>
+        </aside>
+    </main>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+</html>
