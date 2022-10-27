@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position Sticky Ex3</title>
+    <style>
+
+        body{
+            margin: 0;
+            text-align: center;
+        }
+
+        article{
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 100vh; /*viewport height*/
+        }
+        article h2{
+            position: absolute;
+            top: 50px;
+            left: 0; right: 0; margin: auto;
+            color: orange;
+        }
+        article img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            aspect-ratio: 1 / 1; /*1:1비율로 이미지 크기 조절 */
+            aspect-ratio: 4/3; /*가로4대 세로3 비율*/
+            aspect-ratio: 4; /* 한자리 숫자 작성 시 4/1비율*/
+            aspect-ratio: auto 1/1; /* 기본 비율을 가지고 있는 경우 기본 비율로 보이고 그렇지 않은 경우 지정 비율*/
+            /* 값이 고정되지 않는 경우 고정된 width, height값이 있는 경우 */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 임시이미지 
+    1. https://placekitten.com/가로/세로  고양이 
+    2. https://picsum.photos/가로/세로  랜덤
+    https://picsum.photos/id/1/가로/세로 (id:)
+    단점 : 느리게 불러와질 있음
+    3. https://via.placeholder.com/가로x세로/배경색/글자색?text=원하는+내용 불러오는 속도 빠름
+     -->
+    <article class=" title title1">
+        <h2>title1</h2>
+            <img src="https://via.placeholder.com/800x700/ffddd2/?text=000+1" alt="">
+        
+    </article>
+    <article class="title title2">
+        <h2>title2</h2>
+            <img src="https://picsum.photos/id/1/800/700 " alt="">
+        
+    </article>
+    <article class="title title3">
+        <h2>title3</h2>
+            <img src="https://placekitten.com/800/700 " alt="">
+        
+    </article>
+    <article class="title title4">
+        <h2>title4</h2>
+            <img src="https://picsum.photos/id/100/800/700 " alt="">
+        
+    </article>
+    <article class="title title5">
+        <h2>title5</h2>
+            <img src="https://picsum.photos/id/702/800/700 " alt="">
+        
+    </article>
+</body>
+</html>
