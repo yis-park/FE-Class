@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>원형 그라디언트 radial-gradient</title>
+    <style>
+                h1 {
+            text-align: center;
+            font-size: 26px;        
+        }
+        .wrapper{
+            list-style: none;
+            padding: 0;
+            background-color: #ddd;
+            font-size: 20px; font-weight: bold;
+        }
+        .wrapper .box {
+            border: 3px solid #000;
+            width: 80%; min-width: 400px; height: 200px;
+            margin: 10px auto;
+        }
+        .box1 { 
+            background-image: radial-gradient(orange, pink);
+        }
+        .box2 { 
+            background-image: radial-gradient(#eae, #e47, #768, #058);
+        }
+        .box3 { 
+            background-image: radial-gradient(lightskyblue 30%, pink 80%);
+        }
+        .box4 { 
+            /* 영역의 비율과 상관없이 정원의 형태로 그라디언트 보여지고 싶을 때 */
+            background-image: radial-gradient(circle, #ffff86, pink);
+        }
+        .box5 { 
+            background-image: radial-gradient(circle, #ffff86 50%, pink 80%);
+        }
+        .box6 {  /*왼쪽에서 10%, 위에서 80%만큼  이동해서 생성 */
+            background-image: radial-gradient(circle closest-side at 10% 80%,#ffff86, pink);
+        }
+        .box7 { 
+            background-image: repeating-radial-gradient(circle, #fff 0,pink 30px) ;
+        }
+        .box8 { 
+            background-image: repeating-radial-gradient(circle, #fff, #fff 20%, pink 20%, pink 40%);
+        }
+    </style>
+</head>
+<body>
+    <h1>원형 그라디언트 radial-gradient</h1>
+    <ul class="wrapper">
+        <li class="box box1">radial-gradient(1색상, 2색상)</li>
+        <li class="box box2">radial-gradient(1색상, 2색상, 3색상, 4색상)</li>
+        <li class="box box3">radial-gradient(1색상 위치%, 2색상 위치%)</li>
+        <li class="box box4">radial-gradient(circle, 1색상, 2색상, 정 원의 그라디언트)</li>
+        <li class="box box5">radial-gradient(circle, 1색상 위치%, 2색상 위치%)</li>
+        <li class="box box6">radial-gradient(circle closet-side at 위치, 1색상, 2색상)</li>
+        <li class="box box7">radial-gradient(1색상 %, 2색상%)</li>
+        <li class="box box8">radial-gradient(1색상, 2색상)</li>
+    </ul>
+</body>
+</html>

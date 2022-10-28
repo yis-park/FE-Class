@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bgEx1</title>
+    <style>
+        /* 
+        https://via.placeholder.com/800x700/ffddd2/?text=000+1
+        https://picsum.photos/id/1/800/700 
+        https://placekitten.com/800/700 
+        https://picsum.photos/id/100/800/700
+        https://picsum.photos/id/702/800/700
+        */
+        body {
+            margin: 0;
+            text-align: center;
+        }
+        article {
+            position: sticky;
+            height: 100vh;
+            background: fixed no-repeat 50% 0/ cover;
+        }
+
+        article:nth-child(1){
+            background-image:url(https://via.placeholder.com/800x700/ffddd2/?text=000+1);
+            /* background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: cover; */
+         }
+        article:nth-child(2){ background-image: url(https://picsum.photos/id/1/800/700 ); }
+        article:nth-child(3){ background-image: url(https://placekitten.com/800/700 ); }
+        article:nth-child(4){ background-image: url(https://picsum.photos/id/100/800/700); }
+        article:nth-child(5){ background-image: url(https://picsum.photos/id/702/800/700); }
+
+        article h2{
+            padding: 10px;
+            background-color: pink;
+            border-radius: 0 0 30px 30px;
+            color: #fff;
+            width: 130px;
+            position: sticky;
+            top: 0; 
+            margin: 0 auto;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <article class="title1">
+        <h2>title1</h2>
+    </article>
+    <article class="title2">
+        <h2>title2</h2>        
+    </article>
+    <article class="title3">
+        <h2>title3</h2>        
+    </article>
+    <article class="title4">
+        <h2>title4</h2>        
+    </article>
+    <article class="title5">
+        <h2>title5</h2>        
+    </article>
+</body>
+</html>

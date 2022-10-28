@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bgEx4</title>
+    <style>
+        form {
+            width: 500px;         
+            margin: 30px auto;
+            border: 3px solid #000;
+            width: 500px;
+            padding:30px ;
+        }
+        form input{
+            outline: none;
+            display: block;
+
+            border: 1px solid #000;
+            border-radius: 30px;
+            width: 280px;
+            font-size: 20px;
+            text-indent: 40px;
+            padding: 10px 30px;
+            margin: 10px auto;
+
+            background: rgb(255, 192, 203)  no-repeat 10px  50% / 36px;
+        }
+
+        input[ type="text" ]{ /*속성 선택자*/
+            background-image: url(./images/person.svg);
+        }
+
+        input[type="email"] {
+            background-image: url(./images/email.svg);
+        }
+
+        [id=user_tel] {
+            background-image: url(./images/smartphone.svg) ;
+        }
+
+        input:hover, input:focus{
+            background-color: #9dbceb;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" name="user_name" id="user_name" placeholder="이름을 작성해 주세요">
+        <input type="email" name="user_email" id="user_email" placeholder="이메일를 작성해주세요">
+        <input type="tel" name="user_tel" id="user_tel" placeholder="연락처를 작성해 주세요">
+    </form>
+</body>
+</html>
