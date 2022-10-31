@@ -5,11 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>webEx1</title>
     <style>
+        .clearfix::after {
+          content: "";
+         display: block;
+         height: 0;
+         clear: both;
+        }
         body {
-        background: url(./images/watercolor.png);
+            line-height: 1.6;
+            background: url(./images/watercolor.png);
+            font-family:"HYHWPEQ", "HYPost", "휴먼매직체", "맑은 고딕", sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
         }
         section {
-            border: 5px solid #ddd;
+
+            width: 950px; height: 815px;
+            border: 5px solid hwb(0 92% 2%);
+            background-color: rgb(255, 254, 254);
+            overflow: hidden;
+            margin: 0 auto;
         }
         h1, h2{
             margin: 0;
@@ -20,23 +35,92 @@
             background: url(./images/kurly.svg) no-repeat 5% 50% , hsl(300, 100%, 88%) ; 
         }
         .product {
-            margin: 0; padding: 5px;
+            margin: 0; padding: 0px;
             list-style: none;
             float: left;
             background-color: yellow;
             height: ;
-            display: block;
+            width: 100%;
         }
+
         ul li {
             float: left;
-            padding: 10px 50px;
-
+            /* padding: 10px 50px; */
+            width: 15%;
         }
-        .img{
-            border: 2px solid red;
+        ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color:#000;
+      display: block;
+      height: 50px; line-height: 50px;
+      /* margin: 0 auto; */
+      text-align: center;
+    }
+    ul li a:hover {
+        background-color:red;
+        margin: 0;
+    }
+        strong{
+            color: red;
         }
         figure{
             border: 3px solid red;
+            width: 300px; height: 228px;
+            float: left;
+            margin: 0;
+        }
+        article{
+            width: 697px; height: 630px;
+            float: left;
+        }
+        img {
+            width: 290px; height: 190px;
+        }
+        .img_ham, .ham_sub,.img_curry, .curry_sub {
+            float: left;
+            width: 300px; height: 200px;
+            margin: 40px 0 ;
+             padding: 0 20px;}
+
+        aside {
+            float: left;
+            width: 251px;
+            height: 630px;
+            border-left:1px red solid;
+            background-color: #fff;
+            text-indent: 30px;
+
+        }
+        aside h3, aside p {
+            border-bottom:1px red solid;
+            
+        }
+
+        aside h4 {
+            padding: 20px 0;
+            height: 20px;
+            line-height: 20px;
+            font-size: 20px;
+            color: red;
+
+        }
+
+        aside a{
+            text-decoration: none;
+            color: #000;
+            /* padding: 15px; */
+        }
+        aside p:hover {
+            background-color: red;
+        }
+        footer {
+            padding: 10px 20px;
+            background-color: hsl(300, 100%, 88%) ; 
+            color: #fff;
+            vertical-align: bottom;
+            width: 100%;
+            clear: both;
         }
     </style>
 </head>
@@ -53,31 +137,39 @@
         <li><a href="#">케이터링</a></li>
         <li><a href="#">연락처</a></li>
     </ul>
-
-    <div class="ham" >
-        <figure><img src="./images/ham.jpg"> <figcaption>Oriental Salad</figcaption></figure>
+    <article>
+    <div class="img_ham" >
+        <figure><img src="./images/ham.jpg" class="ham"> <figcaption>Oriental Salad</figcaption></figure>
+        
+    </div>
+    <div class="ham_sub">
         <h3>채식주의자</h3>
         <p><strong>런던에서의 5주 코스</strong><br>
         5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</p>
     </div>
-    <div class="curry" >
-        <figure><img src="./images/curry.jpg"><figcaption>Soy Sause</figcaption></figure>
+    <div class="img_curry" >
+        <figure><img src="./images/curry.jpg" class="curry"><figcaption>Soy Sause</figcaption></figure>
+
+    </div>
+    <div class="curry_sub">
         <h3>소스 마스터클래스</h3>
         <p><strong>1일 워크샵</strong><br>
         1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</p>
     </div>
-
-    <div class="wrapper">
-        <h3>인기요리법</h3>
-        <ul class="menu">
-            <li>후라이드</li>
-            <li>고추바사삭</li>
-            <li>양념치킨</li>
-            <li>강정</li>
+</article>
+    <aside>
+        <h4>인기요리법</h3>
+            <p><a href="#">후라이드</a> </p>
+            <p><a href="#">고추바사삭</a></p>
+            <p><a href="#">양념치킨</a></p>
+            <p><a href="#">강정</a></p>
         </ul>
-        <h3>연락처</h3>
-        <p>경기 수원시 팔달구 매산동</p>
-    </div>
+        <h4>연락처</h4>
+        <span>경기 수원시 팔달구 매산동</span>
+    </aside>
+    <footer>
+        ©Kim's Kitchen 김씨네 키친
+    </footer>
     </section>
 </body>
 </html>
