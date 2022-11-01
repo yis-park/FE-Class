@@ -1,0 +1,187 @@
+// 컴파일 되지 않는 주석
+/* 컴파일 되는 주석*/
+//  @import "./minireset", "./fonts"; 확장자 생략 가능. 외부, 내부 문서 불러오는 방식
+
+// 변수 선언
+// color
+$colorBg:#7d1e6a;
+$colorWhite: #fff;
+$colorMain: #e4010b;
+// font
+$font : 'Shadows Into Light', 'Poor Stoty', '카페24 고운밤', 'Georgia', 'Times New Roman';
+$border: $colorMain 1px solid;
+
+// 선언 @mixin, 적용 @include
+@mixin pri-font {
+    font : {
+        family : $font;
+        weight : 400;
+        size : 18px;
+    }
+    color: #000;
+    line-height: 1.5;
+}
+@mixin fontSpoqa {
+    family : 'SpoqaHanSansNeo', sans-serif;
+    weight: 300;
+    color: $colorWhite;
+}
+//  @mixin $fontSpoqa {
+    // font-family : ;
+    // color: ;
+    // background: {
+    //     color: ;
+    //     image: url();
+    //     repeat:;
+    // }
+// }
+// .clearfix::after{
+
+// }
+
+body {
+    // 적용
+    @include pri-font;
+    
+    text-transform: capitalize;
+    background: #2e160a url(./images/dark-wood.jpg);
+}
+
+
+/* container */
+.container { // 실제 사이즈 940
+    border: solid  #eeb0b0 4px;
+    background-color: #fff;
+    width: 940px; //컨텐츠 영역 : 940-8=932
+    margin: 20px auto;
+
+    /* header */
+h1 {
+    background: #7d1e6a url(./images/logo.png) no-repeat 20px 20px / 90px ;
+    color :$colorWhite;
+    font-family: 'Fasthand', 'Poor Stoty', '카페24 고운밤', 'Georgia', 'Times New Roman';
+    font-size: 38px;
+    line-height: 0.9;
+    height: 130px;
+    /* text-indent: 130px; */
+    padding: 30px 0 0 130px;
+    em {
+        display: block;
+        font-family: 'Covered By Your Grace','Poor Stoty', sans-serif;
+    }
+    }
+
+    #gnb {
+        background-color: #ffcd38;
+        /* overflow: hidden; */
+        // #gnb::after{}
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+        li {
+            float: left;
+
+            a{
+                color: $colorBg;
+                text-decoration: none;
+                font-family: $font;
+                font-weight: 700;
+                display: block;
+                padding: 10px 20px;
+                &:hover{
+                    background-color: #e4010b;
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+
+
+
+    footer {
+        background-color: $colorBg;
+        @include fontSpoqa;
+
+        height: 34px;
+        line-height :34px;
+    }
+
+
+/* main */
+main {
+    overflow: hidden;
+    article { // 
+        background-color: #f1eee9;
+        float: left;
+        width: 70%; //932 * 0.7=652 / 컨텐츠영역: 611px
+        padding: {
+            top: 30px; bottom : 30px;
+            left: 20px; right: 20px;
+        };
+        border-right: $border;
+
+        figure { // 304
+            border: $border;
+            background-color: $colorWhite;
+            width: 304px;
+            padding: 6px;
+            font-size: 16px;
+            text-align: right;
+            color:#999;
+            font-style: italic;
+            float: left;
+            margin: 0 20px 40px 0;
+        }
+        .txt_box { // article 컨텐츠:611-304-20=287
+            width: 287px;
+            float: left;
+            // height: 234px;
+            &-title1 {
+                font-size: 26px;
+                font-weight: 700;
+            }
+            &_title2 {
+                color: $colorMain;
+                font-size: 20px;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+
+        }
+    }
+
+    aside{
+        float: left;
+        width: 30%;
+        font-size: 24px;
+
+
+        h2{
+            color: $colorMain;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 30px 20px;
+        }
+        ul{
+            &.recipe a{ //종속 선택자
+                display: block;
+                color: #000;
+                text-decoration: none;
+                border-bottom: $border;
+                padding: 16px 20px 8px;
+
+                &:hover{
+                    background-color: $colorMain;
+                    color: $colorWhite;
+                }
+            }
+        }
+
+    }
+}
+
+}

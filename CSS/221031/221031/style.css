@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* 컴파일 되는 주석*/
+body {
+  font-family: "Shadows Into Light", "Poor Stoty", "카페24 고운밤", "Georgia", "Times New Roman";
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.5;
+  text-transform: capitalize;
+  background: #2e160a url(./images/dark-wood.jpg);
+}
+
+/* container */
+.container {
+  border: solid #eeb0b0 4px;
+  background-color: #fff;
+  width: 940px;
+  margin: 20px auto;
+  /* header */
+  /* main */
+}
+.container h1 {
+  background: #7d1e6a url(./images/logo.png) no-repeat 20px 20px/90px;
+  color: #fff;
+  font-family: "Fasthand", "Poor Stoty", "카페24 고운밤", "Georgia", "Times New Roman";
+  font-size: 38px;
+  line-height: 0.9;
+  height: 130px;
+  /* text-indent: 130px; */
+  padding: 30px 0 0 130px;
+}
+.container h1 em {
+  display: block;
+  font-family: "Covered By Your Grace", "Poor Stoty", sans-serif;
+}
+.container #gnb {
+  background-color: #ffcd38;
+  /* overflow: hidden; */
+}
+.container #gnb::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container #gnb li {
+  float: left;
+}
+.container #gnb li a {
+  color: #7d1e6a;
+  text-decoration: none;
+  font-family: "Shadows Into Light", "Poor Stoty", "카페24 고운밤", "Georgia", "Times New Roman";
+  font-weight: 700;
+  display: block;
+  padding: 10px 20px;
+}
+.container #gnb li a:hover {
+  background-color: #e4010b;
+  color: #fff;
+}
+.container footer {
+  background-color: #7d1e6a;
+  family: "SpoqaHanSansNeo", sans-serif;
+  weight: 300;
+  color: #fff;
+  height: 34px;
+  line-height: 34px;
+}
+.container main {
+  overflow: hidden;
+}
+.container main article {
+  background-color: #f1eee9;
+  float: left;
+  width: 70%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: #e4010b 1px solid;
+}
+.container main article figure {
+  border: #e4010b 1px solid;
+  background-color: #fff;
+  width: 304px;
+  padding: 6px;
+  font-size: 16px;
+  text-align: right;
+  color: #999;
+  font-style: italic;
+  float: left;
+  margin: 0 20px 40px 0;
+}
+.container main article .txt_box {
+  width: 287px;
+  float: left;
+}
+.container main article .txt_box-title1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+.container main article .txt_box_title2 {
+  color: #e4010b;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.container main aside {
+  float: left;
+  width: 30%;
+  font-size: 24px;
+}
+.container main aside h2 {
+  color: #e4010b;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 30px 20px;
+}
+.container main aside ul.recipe a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  border-bottom: #e4010b 1px solid;
+  padding: 16px 20px 8px;
+}
+.container main aside ul.recipe a:hover {
+  background-color: #e4010b;
+  color: #fff;
+}
