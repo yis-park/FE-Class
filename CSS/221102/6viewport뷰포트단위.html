@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Viewport 단위 vw,vh</title>
+    <style>
+        body, ul{
+            margin: 0; padding: 0; font-weight: bold; font-size: 22px;
+        }
+        .box{ /*박스 영역에 브라우저 만큼의 사이즈가 생김. 그래서 스크롤이 생긴 것 또한 스크롤 사이즈를 인식하지 못함. 그래서 스크롤이 또 생김*/
+            background-color: #fdfd81;
+            /* vw: 뷰포트의 가로 값을 기준으로 적용 */
+            width:70vw ;
+            width: 800px;
+            /* vw: 뷰포트의 세로 값을 기준으로 적용 */
+            height:100vh ;
+            height:50vh ;
+        }
+        .box p {
+            background-color: #b1b1ff;
+            /* width: 50%;  height: 50%; */
+            width: 50vw; height: 50vh;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Viewport 단위 vw, vh</h1>
+    <ul>
+        <li>뷰포트의 가로 세로 값을 기준으로 사용하는 상대 단위 값</li>
+        <li>100분의 1 단위</li>
+        <li>상대 단위인 %는 부모를 기준으로 값을 정하지만, vw,vh는 부모와는 상관없이 뷰포트를 기준으로 값을 정한다.</li>
+    </ul>
+    <div class="box">
+        <p>뷰포트 기준 단위값</p>
+    </div>
+</body>
+</html>
