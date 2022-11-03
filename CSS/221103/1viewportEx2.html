@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>viewport Ex</title>
+    <style>
+        /* 
+        컨텐츠가 없어도 브라우저의 높이값을 인식시키는 방법
+        1. html, body {height:100%} 이하 필요한 하위 요소까지 height:100% 적용
+        2. position: absolute, fixed
+        3. height: 100vh
+        4. flex, grid            
+        */
+
+        /* html{    height: 100%;       } */
+        body{
+            margin: 20px; padding: 0; text-align: center;
+        }
+
+        ul{
+            list-style: none; margin: 0; padding: 0;
+            border:10px solid #000;
+            overflow: hidden;
+        }
+
+        ul li{
+            width: 33.3%;
+            font-size: 20px;
+            height:30vh ; float: left;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .bg1{
+            background-color: pink ;  
+        }
+        .bg2 {
+            background-color: #e4ffc0 ;
+            color: #555}
+        .bg3 {
+            background-color: #c0fdff ; 
+            color: #555;}  
+        .bg4 {
+            background-color: #c0c4ff; 
+            width: 100%; 
+        }
+        .bg5 {
+            background-color: #f8ed8c;
+            color: #555;   width: 25%; }
+        .bg6 {
+            background-color: #edc0ff;
+            width: 25%;  }
+        .bg7 {
+            background-color: #ff4747 ;
+            width: 25%;  }
+        .bg8 {
+            background-color: #44ffe6;
+            width: 25%;  }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="bg1">bg1</li>
+        <li class="bg2">bg2</li>
+        <li class="bg3">bg3</li>
+        <li class="bg4">bg4</li>
+        <li class="bg5">bg5</li>
+        <li class="bg6">bg6</li>
+        <li class="bg7">bg7</li>
+        <li class="bg8">bg8</li>
+        
+    </ul>
+
+</body>
+</html>

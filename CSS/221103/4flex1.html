@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex1</title>
+    <style>
+        body{ margin: 0; font-size: 2em; font-weight: bold; text-align: center;}
+        .wrapper{
+            border: 8px solid #000; margin: 2vw auto; width: 80vw;
+        }
+        /* 
+        display: flex;
+            뷰포트나 요소의 크기가 동적으로 변할 때 사용.
+            상속되지 않음.
+            부모박스(flex-container)와 자식아이템(flex-item)의 개념으로 구성 됨
+
+            flex-container에 들어가는 특성: flex-direction, flex-wrap, justify-content, align-content...
+            flex-item에 들어가는 특성: align-self, flex, flex-grow, flex-shrink, flex-basis, order...
+        */
+        #container{  /* flex container */
+            display: flex;
+            /* 플렉스 아이템의 가로 세로 정렬 기준 설정. 주축의 방향 설정 */
+            flex-direction: row; /*기본값. 주축은 가로(왼쪽->오른쪽) 교차축은 세로(위->아래*/
+            flex-direction: column; /*주축은 세로(위->아래) 교차축은 가로(왼쪽->오른쪽)*/
+            flex-direction: row-reverse; /* 진행방향을 뒤집는다. 주축은 가로(왼쪽->오른쪽)*/
+            flex-direction: column-reverse; /* 주축은 세로(아래->위) */
+        }
+        #container .item1 {background-color:pink;}
+        #container .item2 {background-color:#e8c0ff;}
+        #container .item3 {background-color:#c0f2ff;}
+        #container .item4 {background-color:#d0ffc2;}
+    </style>
+</head>
+<body>
+    <h1>flex-direction 정렬</h1>
+    <div class="wrapper" id="container"> <!-- flex container-->
+        <box class="item1">item1</box> <!-- flex item-->
+        <box class="item2">item2</box> <!-- flex item-->
+        <box class="item3">item3</box> <!-- flex item-->
+        <box class="item4">item4</box> <!-- flex item-->
+    </div>
+    <img src="./images/flex.png" alt="플렉스 구조 이미지">
+</body>
+</html>

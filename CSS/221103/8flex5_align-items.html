@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex5_align-items</title>
+    <style>
+        body{ margin: 0; font-size: 2em; font-weight: bold; text-align: center;}
+        .wrapper{ border: 8px solid #000; margin: 2vw auto; width: 80vw; height: 40vh; display: flex; 
+        flex-flow: row nowrap; /* 기본값*/
+        justify-content: center;
+        }
+        .container1 {
+            /* 교차축 기준 아이템 정렬 */
+            align-items: stretch;/* 기본값. 아이템 높이값이 없어도 컨테이너의 높이값 만큼 아이템 확장 정렬*/
+            align-items: flex-start; /* 높이값 사라짐. 교차축 기준 시작점에서 끝나는 지점으로 정렬 */
+            align-items: flex-end; /* 교차축 기준 끝나는 지점에서 시작점으로 정렬 */
+            align-items: center; /* 교차축 기준 중앙 정렬 */
+        }
+
+        .container2{
+            flex-direction: column; /*래퍼의 justify-content: center;때문에 중앙정렬로 보이고, column으로 높이값 없애고 가로 꽉 찬 세로중앙정렬*/
+
+            align-items: stretch;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+
+        }
+        
+        
+        .container1 .item1 {background-color: pink;}
+        .container1 .item2 {background-color: #ffba6a;}
+        .container1 .item3 {background-color: hwb(133 61% 0%);}
+        
+        .container2 .item1 {background-color: #5384df;}
+        .container2 .item2 {background-color: hsl(189, 100%, 56%);}
+        .container2 .item3 {background-color: hwb(266 51% 1%);}
+    </style>
+</head>
+<body>
+    <h1>flex5_align-items</h1>
+    <h2>주축 : row</h2>
+    <div class="wrapper container1">
+        <div class="box item1">item1</div>
+        <div class="box item2">item2</div>
+        <div class="box item3">item3</div>
+    </div>
+    <h2>주축 : column</h2>
+    <div class="wrapper container2">
+        <div class="box item1">item1</div>
+        <div class="box item2">item2</div>
+        <div class="box item3">item3</div>
+    </div>
+
+</body>
+</html>
