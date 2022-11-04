@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexEx4</title>
+    <style>
+        h1{        text-align: center;       }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form label{ /* flex-item 이자 fiex-container 역할 하라 수 있음*/
+            display: flex;
+            margin: 6px;
+            /* 기본값때문에 글자에도 하이트값이 들어간 것임. 글자 공간만큼에만 색을 주고 싶다면 하단의 얼라인아이템 값 주기. */
+            align-items: center;
+        }
+        form label span { /*flex-item성격 가지게 됨*/
+            background-color: #d3e2ff;
+            font-weight: bold; font-size: 1.4em;
+            padding: 0 6px; margin-right: 10px;
+
+            /* ---> span은 인라인이라 위드, 텍스트얼라인 안먹음 근데 flex-item은 위드, 하이트 먹음. 상위(라벨)에 플랙스 값 주기*/
+            width: 150px; text-align: right; 
+
+            /* 
+            display:flex;
+            align-items:center; 
+            flex-item은 text-align보다 원 값을 가짐. 값 주면 인풋 사이트값의 여백에 글자만 중앙정렬 됨. */
+        }
+        form label input[type=text] {
+            outline: none;
+            border: 1pz solid #000;
+            width: 200px; height: 30px; padding: 4px;
+        }
+        form label:nth-child(2) ~ label input[type=text] {
+            height: 120px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>폼 타이틀 세로 중앙정렬</h1>
+
+    <form>
+        <label>
+            <span>채널 키워드</span>
+            <input type="text" placeholder="플렉스 적용하기1">
+        </label>
+        <label>
+            <span>채널 키워드</span>
+            <input type="text" placeholder="플렉스 적용하기1">
+        </label>
+        <label>
+            <span>channel keyword</span>
+            <input type="text" placeholder="플렉스 적용하기1">
+        </label>
+        <label>
+            <span>channel keyword keyword</span>
+            <input type="text" placeholder="플렉스 적용하기1">
+        </label>
+        <label>
+            <span>channel</span>
+            <input type="text" placeholder="플렉스 적용하기1">
+        </label>
+    </form>
+
+</body>
+</html>

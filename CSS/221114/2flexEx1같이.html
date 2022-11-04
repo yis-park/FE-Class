@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>flexEx1</title>
+    <style>
+
+        .wrapper{  /* flex-container*/
+            padding: 0; margin: 50px auto; font-size: 20px; font-weight: bold;
+            width: 80%; height: 950px; border:5px solid #000 ; list-style: none;
+            
+            display: flex; 
+            /*
+            flex-direction: row; 
+            flex-wrap: wrap;
+            justify-content: center; 주축 기준 정렬 
+            align-items: center; 개별 아이템의 교차축 정렬
+            align-content :center; 여러 아이템을 하나의 그룹으로 두고 교차축 정렬
+            */
+            flex-direction: column;
+            justify-content: center;
+             align-content: center; 
+             align-items: center; 
+        }
+        .wrapper .box{ /* .wrapper의 flex-item이자 글자들의 flex-container */
+            width: 50%; margin: 0 1%; height: 150px; color: #fff;  
+            display: flex;    /* 주축 row */
+            justify-content: center; /*주축 기준 중앙정렬*/
+            align-items: center; /*교차축 기준 중앙정렬*/
+        }
+        .box1{ background-color: pink;}
+        .box2{ background-color: #ffe2c0;  }
+        .box3{ background-color: #cfffc0;}
+        .box4{ background-color: hsl(207, 100%, 88%);}
+        .box5{ background-color: #f0c0ff;}
+
+    </style>
+</head>
+<body>
+    <ul class="wrapper container">
+        <li class="box box1">box1<br>box</li>
+        <li class="box box2">box2<br>box</li>
+        <li class="box box3">box3<br>box</li>
+        <li class="box box4">box4<br>box</li>
+        <li class="box box5">box5<br>box</li>
+    </ㅣ>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexEx3</title>
+    <style>
+        body{
+            margin: 0; padding: 0; font-weight: bold; font-size: 1.5em; font-size: 1.5em;
+            font-weight: bold;
+        }
+        /* .container{
+            display: flex;  flex-direction: column; height: 100vh;    } */
+        .container header{ background-color: pink; height: 14vh;}
+        .container nav{ background-color: #c6c0ff; color: #fff; width:calc(100%-2vh) ; padding: 1vh; height: 4vh;}
+        .container main{ /* flex-container*/
+            display: flex; height: 80vh
+            /* flex-grow: 1; 플렉스 아이템에 적용시키는 증가비율 조절 특성 */
+        }
+        aside{ background-color: #c0e8ff;   width: 30%; }
+        article{ background-color: #fffec0;  width: 70%;   }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>            
+        <nav> navigation</nav>
+        <main>
+            <aside>aside</aside>
+            <article>
+                <h2>content</h2>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

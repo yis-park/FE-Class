@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>flexEx1</title>
+    <style>
+
+        .wrapper{  /*ul li로 만들었을 때 플랙스로 중앙정렬 하려면 컨테이너가 하나 더 필요함. 그래서 불필요한 소스가 추가됨*/
+            padding: 0; font-size: 20px; font-weight: bold; text-align: center; 
+            width: 80%; height: 60vh; border:5px solid #000 ; display: flex; justify-content: center; flex-flow: column; align-items: center;}
+
+        .box{ width: 60%;   }
+        .box1{ background-color: pink;}
+        .box2{ background-color: #ffe2c0;}
+        .box3{ background-color: #cfffc0;}
+        .box4{ background-color: #c0fff5;}
+        .box5{ background-color: #f0c0ff;}
+
+    </style>
+</head>
+<body>
+    <div class="wrapper container">
+        <box class="box box1">box1<br>box</box>
+        <box class="box box2">box2<br>box</box>
+        <box class="box box3">box3<br>box</box>
+        <box class="box box4">box4<br>box</box>
+        <box class="box box5">box5<br>box</box>
+    </div>
+</body>
+</html>
