@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexEx 7</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .container {
+            background-color: #ffe7cc;
+            margin: 0 auto;
+            width: 700px; height: 600px;
+
+            display: flex;
+            flex-flow: wrap column;
+            /* justify-content: center; */
+            justify-content: space-around;
+            /* align-items: center; */
+            align-content: space-around;
+        }
+        .container figure {
+            margin: 0;
+            border: 1px solid #000;
+        }
+        .container figure figcaption {
+            font-weight: bold; 
+            height: 30px;
+            background-color: #000;
+            color: #fff;
+            /* padding-left: 10px;
+            text-align: center;
+            line-height: 30px;  택1 아래 택2 상황에 따라 조절하여 쓰기. 택1은 한줄밖에 못 씀*/
+            display: flex;
+            justify-content : center; align-items : center;
+        }
+        .container figure img {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+        <h1>상하 정렬 갤러리</h1>
+        <div class="container"><!-- flex container -->
+            <figure><!-- flex item -->
+                <img src="https://via.placeholder.com/300x200/80489C/fff?text=img1" alt="title1">
+            <figcaption>title1</figcaption>
+            </figure>
+            <figure><!-- flex item -->
+                <img src="https://via.placeholder.com/300x200/0W5W6F/fff?text=img2" alt="title2">
+            <figcaption>title2</figcaption>
+            </figure>
+            <figure><!-- flex item -->
+                <img src="https://via.placeholder.com/300x200/FD841F/fff?text=img3" alt="title3">
+            <figcaption>title3</figcaption>
+            </figure>
+            <figure><!-- flex item -->
+                <img src="https://via.placeholder.com/300x200/82CD47/fff?text=img4" alt="title4">
+            <figcaption>title4</figcaption>
+            </figure>
+
+    </div>
+</body>
+</html>

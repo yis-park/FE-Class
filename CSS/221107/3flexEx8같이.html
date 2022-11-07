@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexEx8</title>
+    <style>
+        h1 { text-align: center;}
+        .gallery{ list-style: none; padding: 0; margin: 0 auto;
+            border: 6px solid #000; width: 80vw;
+            display: flex; flex-wrap: wrap;
+        }
+        .gallery li{ /*33.3333%*/
+            width: 31.333%; margin: 1%;
+        }
+        .gallery img{
+            vertical-align: top;
+            width: 100%;
+        }
+        .gallery h3{
+            margin: 0; padding: 8px;
+            background-color: #000; color: #fff; text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+    <ul class="gallery">
+        <li>
+            <img src="https://via.placeholder.com/300x200/80489C/fff?text=img1" alt="title1">
+                <h3>title1</h3>
+            </img>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200/0W5W6F/fff?text=img2" alt="title2">
+                <h3>title2</h3>
+            </img>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200/FD841F/fff?text=img3" alt="title3">
+                <h3>title3</h3>
+            </img>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200/FF00DD/fff?text=img4" alt="title4">
+                <h3>title4</h3>
+            </img>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200//FFE400/fff?text=img5" alt="title5">
+                <h3>title5</h3>
+            </img>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200/82CD47/fff?text=img6" alt="title6">
+                <h3>title6</h3>
+            </img>
+        </li>
+    </ul>
+</body>
+</html>

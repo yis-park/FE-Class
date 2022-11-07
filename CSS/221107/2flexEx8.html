@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexEx8</title>
+    <style>
+        .wrapper{
+            margin: 0 auto; padding: 0;  width: 80%; height: 70vh;
+            border: 5px solid #000;
+            display: flex; flex-flow: wrap; background-color: pink;
+            justify-content: space-around; align-content: space-around;
+        }
+        .wrapper figure {
+            margin: 0px;
+           
+
+        }
+        .wrapper figure figcaption {
+            background-color: #b5b5fc;
+            height: 30px; font-weight: bold; color: #fff;
+            display: flex; justify-content: center; align-items: center;
+
+        }
+        figure img {
+            margin: 0; padding: 0; 
+            vertical-align: top; width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+    <div class="wrapper">
+        <figure>
+            <img src="https://via.placeholder.com/250x200/80489C/fff?text=img1" alt="">
+                <figcaption>img1</figcaption>
+            </img>
+        </figure>
+        <figure>
+            <img src="https://via.placeholder.com/250x200/0W5W6F/fff?text=img2" alt="">
+                <figcaption>img2</figcaption>
+            </img>
+        </figure>
+        <figure>
+            <img src="https://via.placeholder.com/250x200/FD841F/fff?text=img3" alt="">
+                <figcaption>img3</figcaption>
+            </img>
+        </figure>
+        <figure>
+            <img src="https://via.placeholder.com/250x200/82CD47/fff?text=img4" alt="">
+                <figcaption>img4</figcaption>
+            </img>
+        </figure>
+        <figure>
+            <img src="https://via.placeholder.com/250x200/FF00DD/fff?text=img5" alt="">
+                <figcaption>img5</figcaption>
+            </img>
+        </figure>
+        <figure>
+            <img src="https://via.placeholder.com/250x200/FFE400/fff?text=img6" alt="">
+                <figcaption>img6</figcaption>
+            </img>
+        </figure>
+    </div>
+</body>
+</html>
