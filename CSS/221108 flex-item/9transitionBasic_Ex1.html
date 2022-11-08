@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transitionBasic_Ex1</title>
+    <style>
+        .cicle {
+            width: 100px; height: 100px; background-color: tomato;  margin: 0 auto;
+
+            transition-property: width, height, border-radius;
+            transition-property: all; /* 모든 속성*/
+
+            transition-duration: 1s
+        }
+        .cicle:hover{
+            width: 500px; height: 500px;  border-radius: 50%; background-color: lightblue; font-weight: bold; font-size: 2em;
+        }
+        .cicle:active{
+            background-color: #333;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cicle"></div>
+</body>
+</html>

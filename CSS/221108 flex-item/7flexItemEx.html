@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex item Ex</title>
+    <style>
+        body{ font-size: 1.5em; font-weight: bold; margin: 0; padding: 0; 
+       }
+        .container{ background-color: #ddd; 
+            height: 100vh; 
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container header{
+            background-color: pink; flex-shrink: 0; width: 100%;  }
+        .container .box1{
+            background-color: lightblue; flex-grow: 2;  flex-basis: 0;}
+        .container .box2{
+            background-color: orange;   flex-grow: 8; flex-basis: 0;     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+        <aside class="box1">aside</aside>
+        <content class="box2">content</content>
+    </div>
+    
+</body>
+</html>
