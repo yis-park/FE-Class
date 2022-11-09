@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transform:rotate 회전</title>
+    <style>        
+        .box{
+            border: 6px solid #000;
+            margin: 100px auto;
+            width: 250px; height: 250px;
+        }
+        img{
+            width: 100%;
+            border: 3px solid hotpink;
+            box-sizing: border-box;
+            transition: .7s;
+        }
+        .box1:hover img{ transform: rotatex(45deg); }
+        .box2:hover img{ transform: rotatey(-45deg); }
+        .box3:hover img{ transform : rotate(45deg);}
+        .box4:hover img{ transform: rotate(720deg); /*-값 주면 반시계방향*/}
+    </style>
+</head>
+<body>
+    <h1>transform : rotate( ) 회전</h1>
+    <div class="box box1"><img src="./images/wednesday.png" alt="수요일"></div>
+    <div class="box box2"><img src="./images/code.png" alt="img2"></div>
+    <div class="box box3"><img src="./images/wednesday.png" alt="수요일"></div>
+    <div class="box box4"><img src="./images/code.png" alt="img2"></div>
+</body>
+</html>

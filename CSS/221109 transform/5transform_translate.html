@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transform:translate() 이동</title>
+    <style>
+        .box{
+            border: 6px solid #000;
+            margin: 100px auto;
+            width: 250px; height: 250px;
+        }
+        img{
+            width: 100%;
+            border: 3px solid hotpink;
+            box-sizing: border-box;
+            transition: .7s;
+        }
+        /* 허버를 이미지에 주면 사진이 움찔움찔거림. 그래서 css에서는 움직이지 않는 값에 hover 값을 줌 */
+        .box1:hover img{ transform: translate(50%); }
+        .box2:hover img{ transform: translatex(200px); }
+        .box3:hover img{ transform: translatey(-150px); /* 위로 올라감.*/}
+        .box4:hover img{ transform: translate(50%, 50%); }
+
+        /* 
+        이동 가능한  css 특성:
+            ㄴ margin : 여백을 만들어 이동되는 것처럼 보임. 레이아웃에 영향을 줌. 옆에 다른 요소가 있으면 밀림.
+            ㄴ position : 레이아웃에 영향 주지 않음. 독자적인 흐름을 갖는 경우
+            ㄴ transform:translate() : 레이아웃에 영향 주지 않음. 자기 자신을 기준으로 이동함.
+        */
+    </style>
+</head>
+<body>
+    <h1>transform : translate( ) 이동</h1>
+    <div class="box box1"><img src="./images/wednesday.png" alt="수요일"></div>
+    <div class="box box2"><img src="./images/code.png" alt="img2"></div>
+    <div class="box box3"><img src="./images/wednesday.png" alt="수요일"></div>
+    <div class="box box4"><img src="./images/code.png" alt="img2"></div>
+</body>
+</html>

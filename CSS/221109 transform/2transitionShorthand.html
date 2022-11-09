@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transition Shorthand 축약</title>
+    <style>
+        .btn{ text-decoration: none; color: inherit; font-weight: bold; border: 5px solid #000; text-align: center; padding: 8px; width: 100px; display: block;}
+        .item { 
+            height: 100px; width: 20px; margin: 10px 0; background-color: pink; padding: 5px;
+            /* transition-property: all;
+            transition-duration: 1s;
+            transition-delay: 1s;
+            transition-timing-function: linear; */
+            /* 축약형 ↓
+            값의 순서에 상관없이 작성 가능. 첫번째 숫자는 시간, 두번째 숫자는 대기 시간
+            */
+            transition: all 1s 1s linear;
+            transition: 1s linear; /* all 생략가능, 대기 시간 생략 가능. 숫자 하나만 있는 경우 진행 시간*/
+
+        }
+        .bar{ background-color: lightblue;
+            transition-property: all;
+            transition-duration: 0.5s;}
+        .box{ }
+        /* 1번째 방법 .btn:hover ~ .bar { 일반형제 선택자
+            background-color: #000; color:#fff; width: calc(100% - 20px) ;  }*/
+        /* .bar:hover {
+           width: calc(100% - 20px) ; background-color: #ddd;
+        } */
+
+        .btn:hover + .item { /* 인접형제 선택자*/
+            width: calc(100% - 20px) ; background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>transition 축약</h1>
+    <p>버튼 위에 마우스를 올리면 첫 번째 박스의 크기, 색상이 변경</p>
+    <a href="#" class="btn">이벤트</a>
+    <div class="item bar">움직인다</div>
+    <div class="item box">고정 박스</div>
+</body>
+</html>

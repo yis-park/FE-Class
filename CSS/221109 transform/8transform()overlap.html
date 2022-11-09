@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transform 중첩</title>
+    <style>
+        .wrapper{
+            font-weight: bold; font-size: 1.3em; text-align: center; 
+            border: 6px solid #000; width: 500px; height: 50vw; margin: 5vw auto;
+        }
+        .wrapper .box {
+            background-color: tomato; transition: 1s;
+            width: 100%; height: 100%;
+        }
+        .wrapper:hover .box {
+            /* 
+            css 우선 순위 방식에 따라 같은 특성의 값 중 나중에 작성된 값이 적용됨.
+            transform: rotate(360deg);
+            transform: skew(15deg);
+            */
+            /* 여러 개 값 적용시 띄어쓰기로 구분. 순서에 따라 결과 값이 달라질 수도 있음 */
+            transform: scale(.5) rotate(360deg) skew(15deg) ;
+        }
+    </style>
+</head>
+<body>
+    <h1>transform( )overlap 중첩</h1>
+    <div class="wrapper">
+        <div class="box">rotate(); skew(); sclale();</div>
+    </div>
+</body>
+</html>

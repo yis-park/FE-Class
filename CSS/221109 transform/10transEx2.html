@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transEx2</title>
+    <style>
+        .menu{ margin: 0; padding: 0; width: 100px; font-weight: bold; height: 100px; background-color: blue; text-align: center; color: red; line-height: 100px; vertical-align: top;}
+        .menu .close{ transition: .5s; cursor: pointer; height: 100% ;
+        text-indent: -9999px;
+        position: relative;}
+
+        .menu .close::before,
+        .menu .close::after{
+            content: "";
+            background-color: pink;
+            position: absolute;
+            width:10% ; height: 80%;
+            top: 50%; left:50%;
+            /* margin-left: -5%; margin-top: -40%; */
+            transform: translate(-50%, -50%) rotate(45deg) ;/* 이동 시켜주는 갑*/
+        }
+        .menu .close::after{
+            /*  transform: ; */
+            transform: translate(-50%, -50%) rotate(-45deg) ;
+        }
+
+        .menu .close:hover{
+            transform: rotate(180deg);}
+    </style>
+</head>
+<body>
+<!-- 마우스를 위에 올리면 x 아이콘 돌아감 -->
+    <div class="menu">
+        <div class="close">X닫기</div>
+    </div>
+</body>
+</html>

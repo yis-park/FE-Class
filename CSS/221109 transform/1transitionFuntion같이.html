@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transition-timing-funtion</title>
+    <style>
+    h1{ text-align: center; }
+    .container { list-style: none; width: 90vw; height: 70vh; display: flex; padding: 0; margin: 40px auto; text-align: center; font-weight: bold; font-size: 1.3em; border: 3px solid #000; cursor: pointer; }
+    .container li{ /* flex-grow:0; flex-shrink:1; flex-basis:auto; 기본적용이라 위드값 16.6666% 100%에 넘치게 설정해도 줄이 넘어가지 않음*/
+        width: 16.6666%; height: 40px; margin: 5px; background-color: #fddb45; 
+        /* flex-shrink:0; 기본값 1이라 안넘치는데 쉬링크 0으로 해두면 보더값 넘침 */
+        transition-property: all;
+        transition-duration: 1s;
+    }
+    .container:hover li:nth-child(1) { height: calc(100% - 10px);   
+    transition-timing-function: linear; /* 동일한 속도로 진행 */ }
+    .container:hover li:nth-child(2) { height: calc(100% - 10px);   
+    transition-timing-function: ease; /* 기본값. 서서히 증가하다가 끝에서 느려짐 */ }
+    .container:hover li:nth-child(3) { height: calc(100% - 10px);   
+    transition-timing-function: ease-in; /* 서서히 시작하다 끝날 때 빨라짐 */ }
+    .container:hover li:nth-child(4) { height: calc(100% - 10px);   
+    transition-timing-function: ease-out; /* 빠르게 시작하고 끝날 때 느려짐 */ }
+    .container:hover li:nth-child(5) { height: calc(100% - 10px);   
+    transition-timing-function: ease-in-out; /* 서서히 시작하다 빨라지고 끝날 때 느려짐 */ }
+    .container:hover li:nth-child(6) { height: calc(100% - 10px);   
+    transition-timing-function: cubic-bezier(.71,.01,.32,.93); /* 사용자 정의 움직임 큐빅베지어 사이트에서 원하는 움직임 숫자 복사가능*/ }
+
+
+    </style>
+</head>
+<body>
+    <h1>transition-timing-funtion: 움직임 속도 제어</h1>
+    <ul class="container">
+        <li>Linear</li>
+        <li>ease</li>
+        <li>ease-in</li>
+        <li>ease-out</li>
+        <li>ease-in-out</li>
+        <li>cubic-bezier</li>
+    </ul>
+</body>
+</html>
