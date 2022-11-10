@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transEx6</title>
+    <style>
+        body{text-align: center;}
+        nav .lnb li{
+            width: 250px; height: 250px; display: flex; flex-direction: column; background-image: no-repeat; float: left; list-style: none;
+        }
+        .ps{  background-image: url(./images/ps_250.jpg);  }
+        .wed{  background: url(./images/wednesday.png) 50% / contain; }
+        .code{   background: url(./images/code.png) 50% / contain;  }
+        nav .lnb .box{
+            cursor: pointer; padding: 10px 0; font-size:0; transition: 0.5s;  }
+        .ps:hover .box,.wed:hover .box, .code:hover .box{
+            background-color: #000; width: 250px; height: 250px; opacity: 0.8; color: #fff; font-size: inherit;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>trans 연습 6</h1>
+    <nav>
+
+        <ul class="lnb">
+            <li class="img ps">
+                <div class="box"> <h3>핸드폰 케이스</h3>
+            <p>설명이 어쩌구 설명</p><p>가격: 2억 5000만원</p></div></li>
+            <li class="img wed">
+                <div class="box"><h3>핸드폰 케이스</h3>
+            <p>설명이 어쩌구 설명</p><p>가격: 2억 5000만원</p></div></li>
+            <li class="img code">
+                <div class="box"><h3>스니커즈 운동화</h3>
+            <p>설명이 어쩌구 설명</p><p>가격: 2억 5000만원</p></li></div></li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transEx4</title>
+    <style>
+        /* 
+        input:focus{ 텍스트 필드에 포커스가 잡히면 }
+        input:checked{ 체크박스에 체크가 되엇을 때 }
+        input:disabled{ 비활성 }
+        */
+        body{
+            font-size: 1.1em; 
+        }
+        .slidup{
+            background-color: orange;   width:40vw; height: 40vw;
+            transition: 0.5s;
+            overflow: hidden; /*높이,너비값 있어야 사용가능*/
+        }
+        .block{
+            background-color: #9292fc; width: 70vw; height: 100px; 
+        }
+        input[type=checkbox]:checked ~ .slidup  {
+            /* visibility: hidden;보이지 않게끔만 해주는것. 레이아웃에 영향x. 투명도 조절 x 
+            opacity: 0; 투명도 조절o. 레이아웃에 영향x.  
+            display: none; 브라우저 영역에서 사라지며 코드창에서만 확인. 트렌지션(스르륵) 사라짐. 레이아웃에 영향o */
+            height: 0; /* 디스플레이 none과 다르게 요소를 없애지 않고 높이값만 0으로 만들어줌. 컨텐츠는 넘치게 보임. 슬라이드업에 오버플로우 히든 주면 해결됨! */
+
+        }
+    </style>
+</head>
+<body>
+    <h1>trans 연습 4</h1>
+    
+    <input type="checkbox" id="userCheck">
+    <label for="userCheck">체크 박스가 체크되면 박스가 위로 올라와 사라집니다.</label>
+    <div class="slidup">
+        <h2>:checked</h2>
+        얼음이 꽃이 할지라도 주며, 설산에서 하는 피가 교향악이다. 피가 수 천자만홍이 그들은 넣는 사막이다. 사랑의 심장은 눈이 대고, 웅대한 뼈 봄바람이다. 생생하며, 품고 인간의 타오르고 칼이다. 놀이 열락의 발휘하기 이것이야말로 피가 우리의 피가 교향악이다. 보이는 노래하며 온갖 봄바람이다. 
+    </div>
+    <div class="block">block</div>    
+    
+</body>
+</html>

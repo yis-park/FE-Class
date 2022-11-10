@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>포지션 중앙정렬</title>
+    <style>
+        body{margin: 0; text-align: center; font-size: 1.2em;}
+        .box{ width: 60vw; height: 200px; background-color: salmon; margin: 20px auto; position: relative; overflow: hidden;}
+        h3{
+            width: 50%; height: 100px; background-color: maroon; color: #fff; margin: 0; line-height: 100px;
+        }
+        /* h3 중앙 정렬 */
+        /* 포지션이 적용되지 않았으며 요소의 값은 정의되어 있을 때 */
+        .box1 h3{ margin: 50px auto;} 
+        /* .box의 높이값 - h3의 높이값*/
+        /* 마진상쇄현상으로 그냥 마진 50주면 전체가 밑으로 내려감. 박스에 오버플로우히든 값 주면 해결됨 */
+
+        /* 포지션 적용되었을 때 */
+        :is(.box2, .box3, .box4,) h3{ 
+            /* == .box2 h3, .box3, h3.box4 h3 
+            :is(선택자, 선택자2, ...) 여러 선택자 선정
+            div:not(.box1) 인수의 값인 .box1을 제외한 div 요소
+            */
+            position: absolute;
+        }
+        .box2 h3 {
+            /* margin: 50px auto; 일반적인 흐름일 때만 사용 가능 */
+            /* h3의 가로 세로값이 정의되어 있을 때. 요소가 가진 값의 반을 같은 방향의 마진으로 마이너스 값으로 처리 */
+            top: 50%; left: 50%;
+            margin-top: -50px; margin-left: -25%;
+        }
+        .box3 h3 {
+            /* h3의 가로 세로값이 정의되어 있을 때. */
+            top: 0; right: 0; bottom: 0; left: 0; margin: auto;
+            /* top: 25%; left: 25%; 이렇게 해도 중앙정렬 되는데 왜 안쓰지,,? */
+        }
+        .box4 h3 {
+            /* 현재 가장 많이 사용되는 포지션 중앙 정렬 방법 
+            h3의 가로 세로값이 정의되지 않아도 가능 */
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <h3>중앙정렬1</h3>
+    </div>
+    <div class="box box2">
+        <h3>중앙정렬2</h3>
+    </div>
+    <div class="box box3">
+        <h3>중앙정렬3</h3>
+    </div>
+    <div class="box box4">
+        <h3>중앙정렬4 가장많이사용</h3>
+    </div>
+</body>
+</html>
