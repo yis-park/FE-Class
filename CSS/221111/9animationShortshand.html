@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation 축약형</title>
+  <style>
+    .block { width:200px; height:100px; background-color:#f95; float: left; }
+
+    @keyframes mov1 {
+      100% {
+        transform: translateX(80vw) rotate(360deg);
+      }
+    }
+
+    .box {
+      width:200px; height: 200px;
+      /* line-height: 200px; */
+      background-image:linear-gradient(#E14D2A, #3E6D9C);
+      text-align: center; font-weight: bold; font-size: 1.5em; color:#fff;
+      border-radius: 50%;
+      float: left;
+
+      /*
+      animation-name: mov1;
+      animation-duration: 1s;
+      animation-delay: .5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0,-1.2,1,1.87);
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 3;
+      animation-direction: alternate;
+      */
+
+      /* 순서에 상관없이 띄어쓰기로 구분. 두번째 나오는 s는 대기시간으로 생략 가능 */
+      animation: mov1 1s .5s forwards ease-in-out 3 alternate; 
+    }
+
+    .box:hover {
+      animation-play-state: running;/* 일시 멈춤 running 실행 */
+    }
+  </style>
+</head>
+<body>
+  <h1>animation 축약형</h1>
+  <div class="box">
+    <p>축약형</p>
+  </div>
+  <div class="block">block</div>
+</body>
+</html>

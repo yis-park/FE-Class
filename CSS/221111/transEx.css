@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+body{
+    background-color: #eee;
+    
+    font-family: 'Abril Fatface', cursive, sans-serif;
+}
+.profile_box{
+   min-width: 400px; max-width: 500px; background-color: #fff;
+   margin: 50px auto;
+   box-shadow: ; position: relative; overflow: hidden;
+}
+.profile_box .txt_box{
+    width: 45%; padding: 20px;
+}
+.profile_box .txt_box h2 { border-bottom: 1px solid #000;}
+.profile_box .txt_box p{
+    font-family: 'Noto Serif KR', serif;
+    
+}
+.profile_box .txt_box .sns{ list-style: none; margin: 0; padding: 0; display: flex;}
+.profile_box .txt_box .sns a{
+    color: indianred; margin-right: 16px;
+}
+.profile_box .txt_box .sns a:hover{ color: rgb(127, 219, 255);}
+.profile_box .txt_box .sns .sns_icon{ font-size: 2em;}
+.profile_box .txt_box .sns li:last-child .sns_icon{
+    font-size: 1.9em;
+}
+
+.profile_box .sub_title{
+    background-color: #000; color: #fff; font-size: .95em; font-style: italic; 
+    padding: 10px 20px; margin: 0;
+}
+
+.profile_box .round_img {
+    border:3px solid #fff;
+    border-radius: 50%;
+  
+    position: absolute;
+    top:50%; right:-35%;
+    transform: translateY(-50%);
+    transition: .4s;
+  }
+  .profile_box:hover .round_img {
+    right: -31%;
+  }
