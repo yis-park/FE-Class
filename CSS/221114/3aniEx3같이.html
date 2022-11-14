@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ani 연습 3</title>
+    <style>
+        /* css 변수 전역 선언 */
+        :root{
+            --center: center;
+            --zero:0;
+        }
+
+        body{
+            margin: var(--zero); text-align: var(--center); 
+        }
+        .container{height: 100vh; display: flex; align-items: center; overflow: hidden; }
+        .bicycle_wrapper{ /* 앞으로 진행*/
+        animation:move2 5s infinite linear ;
+        position: relative; /* wheel의 기준*/
+        }
+        .bicycle_wrapper .wheel { 
+            position: absolute;
+            left: -93px; bottom: -90px;
+            animation: spin 1s infinite linear;
+        }
+        .bicycle_wrapper .wheel:last-child{
+            right: -93px; /*위에 레프트 적용되어 있어서 라이트 적용되지 않음. 레프트 값으로 주던가 위에 레프트 값을 초기화 시켜줘야 함.*/
+            left: auto; /* 초기화. 기존의 left값 무력화*/
+        } 
+        @keyframes spin{
+            100%{ transform: rotate(360deg);}
+        }
+        @keyframes move1{
+            0%{opacity: 0; left: -10px;}
+            10%{opacity: 1 ;}
+            80%{opacity: 1 ;}
+            100%{opacity: 0 ; left: 90%;}
+        }
+        @keyframes move2{
+            0%{opacity: 0; left:0;}
+            10%{opacity: 1 ;}
+            80%{opacity: 1 ;}
+            100%{opacity: 0 ; left: 110%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bicycle_wrapper">
+            <img src="./images/bicycle.png" alt="bicycle" class="bicycle">
+            <img src="./images/wheel.png" alt="wheel" class="wheel wheel1">
+            <img src="./images/wheel.png" alt="wheel" class="wheel wheel2">
+        </div>
+    </div>
+</body>
+</html>

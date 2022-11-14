@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ani 연습 3</title>
+    <style>
+        body{
+            position: relative;
+        }
+        .bicycle{
+            position: absolute;
+            top: 150px; left: 0
+        }
+        .wheel{
+            animation: wheel infinite linear 5s;
+        }
+        .wheel1{
+            position: absolute;
+            top: 550px; left: -90px;
+        }
+        .wheel2{
+            position: absolute;
+            top: 550px; left: 380px;
+        }
+        .wrapper{
+            animation: bicycle infinite linear 5s; }
+
+        @keyframes bicycle{
+            100%{transform: translateX(100%);}
+
+        }
+        @keyframes wheel{
+            100%{ rotate: 720deg; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <img src="./images/bicycle.png" alt="bicycle" class="bicycle">
+            <img src="./images/wheel.png" alt="wheel" class="wheel wheel1">
+            <img src="./images/wheel.png" alt="wheel" class="wheel wheel2">
+        </div>
+    </div>
+</body>
+</html>

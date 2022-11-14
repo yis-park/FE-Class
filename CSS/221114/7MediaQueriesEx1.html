@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Media Queries Ex1</title>
+    <style>
+        /* 모바일 */
+        body{margin: 0; text-align: center; font-size: 1.5em;font-weight: bold;}
+        .container { display: flex; flex-wrap: wrap; }
+        .box{ width: 100%; height: 40vh; transition: .5s;}
+        .container .box1{ background-color: #ddd;}
+        .container .box2{ background-color: pink;}
+        .container .box3{ background-color: #a52b40; color: #fff;}
+
+        /* 태블릿 */
+        @media (min-width:768px) {
+        .container .box1{ background-color: #ffad4f; width:30%;}
+        .container .box2{ background-color: #c0ffce; width: 70%;}
+        .container .box3{ background-color: #2b82a5; color: #fff;}
+        }
+
+        /* pc */
+        @media (min-width:1280px){
+        .box{ height: 100vh;}
+        .container .box1{ background-color: rgb(253, 109, 109);width: 30%;}
+        .container .box2{ background-color: rgb(192, 255, 192);width: 60%;}
+        .container .box3{ background-color: hsl(271, 59%, 41%); color: #fff;width: 10%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+    </div>
+</body>
+</html>

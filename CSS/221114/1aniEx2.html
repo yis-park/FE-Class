@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ani 연습 2</title>
+    <style>
+        body{
+            background-color: #000; font-size: 11em; color: #fff; text-align: center; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+
+        .box span:hover {
+        animation: neon infinite 0.3s;
+        }
+        
+        @keyframes neon{
+            0% {
+                text-shadow: 5px 5px #dff07f, -5px -6px #584 ;
+            }
+            25% {
+                text-shadow: -5px -5px #dcf359, 5px 6px #ff67d1 ;
+            }
+            50% {
+                text-shadow: 5px 4px #be5959,-8px 6px #ff67d1 ;
+            }
+            75% {
+                text-shadow: 8px 4px hsl(138, 100%, 65%),-8px -3px hsl(241, 100%, 56%) ;
+            }
+            100% {
+                text-shadow: -9px 5px hsl(0, 97%, 55%), 8px 4px hsl(216, 100%, 80%) ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="fir">C</span>
+        <span class="sec">S</span>
+        <span class="thr">S</span>
+        <span class="four">3</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>mq Ex2</title>
+    <style>
+        
+        body{margin: 0; text-align: center; font-size: 1.5em; font-weight: bold;}
+        /* 모바일 float 적용시 
+        .box{height: 20vh; transition: .5s; float: left;}
+        .left_box1{ background-color: #ddd; width: 100%; height: 40vh;}
+        .right_box2{ background-color: pink; width: 100%;}
+        .right_box3{ background-color: #a52b40; color: #fff; width: 100%;}
+
+        /* 태블릿 
+        @media (min-width:768px) {
+        .left_box1{ background-color: #ffad4f; width:30%; height: 60vh;}
+        .right_box2{ background-color: #c0ffce; width: 70%;height: 30vh;}
+        .right_box3{ background-color: #2b82a5; color: #fff; width: 70%; height: 30vh;}
+        }
+
+        /* pc 
+        @media (min-width:1280px){
+        .container{ width: 80%; margin: 0 auto; height: 100vh;}
+        .left_box1{ background-color: rgb(253, 109, 109); width: 30%;}
+        .right_box2{ background-color: rgb(192, 255, 192); width: 60%;}
+        .right_box3{ background-color: hsl(271, 59%, 41%); color: #fff;width: 10%; }
+        }*/
+
+        /* 모바일 float*/
+        .left_item{background-color: #ffad4f; height: 40vh; }
+        .right_item_inner:nth-child(1){background-color: pink; height: 20vh; }
+        .right_item_inner:nth-child(2){background-color: #a52b40; height: 20vh; }
+
+        @media (min-width:768px) {
+        .container{ display: flex;}
+        .left_item{height: 60vh; flex-grow: 3;}
+        .right_item{flex-grow: 7;}
+        .right_item .right_item_inner{ height: 30vh;}
+        }
+
+        @media (min-width:1280px){
+            .container{ width: 90%; margin: 0 auto; max-width: 1600px; }
+
+        }
+    </style>
+</head>
+<body>
+    <!-- float 
+    <div class="container">
+        <div class="box left_box1">left_box1</div>
+        <div class="box right_box2">right_box1</div>
+        <div class="box right_box3">right_box2</div>
+    </div>
+    -->
+    <div class="container">
+        <div class="left_item">left_item</div>
+        <div class="right_item">
+            <div class="right_item_inner">right_item1</div>
+            <div class="right_item_inner">right_item2</div>
+
+        </div>
+    </div>
+</body>
+</html>

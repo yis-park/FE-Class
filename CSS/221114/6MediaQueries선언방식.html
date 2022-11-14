@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Media Queries 선언방식</title>
+    <style>
+        body{            margin: 0; text-align: center;        }
+        h1{ background-color: hsl(234, 100%, 62%); color: #fff; margin: 0; height: 8vh; line-height: 8vh;}
+        h2{ background-color: #f78383;margin: 0; height: 5vh; line-height: 5vh;}
+        .box{ width: 300px; height: 200px; margin: 0 auto; display: inline-block; }
+        .box1{ background-color: rgb(255, 231, 12);}
+        .box2{ background-color: #100cff;}
+        .box3{ background-color: #e30cff;}
+
+        /* 스크린 가로 크기가 최대 1280px 이하면 적용. 즉 최대 1280px까지 적용 */
+        @media (max-width:1280px) {
+            body{ background-color: #bedef8;}
+        }
+        /* 스크린 가로 크기가 최대 768px 까지 적용 */
+        @media (max-width:768px) {
+            body{ background-color: rgb(255, 255, 255); width: 110vw; margin: 0;}
+            .box{ width: 500px; height: 200px; margin: 0 auto; display: flex; flex-direction: column;}
+            .box1{ background-color: rgb(52, 255, 12);}
+            .box2{ background-color: #0cffff;}
+            .box3{ background-color: #ff0c0c;}
+        }
+    </style>
+</head>
+<body>
+    <h1>미디어쿼리선언 방식</h1>
+    <h2>내부선언과 외부선언</h2>
+    <div class="container">
+        <div class="box box1">box1</div><div class="box box2">box2</div><div class="box box3">box3</div>
+    </div>
+
+</body>
+</html>
