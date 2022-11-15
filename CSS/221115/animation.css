@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@keyframes watch{
+0%{ 
+    transform: translateY(-5%);
+}
+50%{
+    transform: translateY(0%);
+}
+}
+
+@keyframes watch2{
+0%, 100% { 
+    transform: translateY(-5%);
+}
+50%{
+    transform: translateY(0%);
+}
+}
+
+@keyframes rotate{
+
+}
+
+@keyframes run{
+
+}

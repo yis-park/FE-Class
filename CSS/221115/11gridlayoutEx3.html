@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gridlayout Ex3</title>
+    <style>
+        .box{ 
+        height: 80vh; width: 90%; margin: 50px auto; border: 6px solid rgb(255, 69, 69);
+        display: grid;  font-weight: bold; font-size: 1.3em; color: #fff;
+        grid-template:100px 1fr 80px / minmax(100px, 15%) 4fr 1fr ;
+        }
+        .box div{
+
+        }
+        header{ background-color: hsl(357, 100%, 75%) ; 
+        grid-column: 1/4; }
+        nav{ background-color: rgb(55, 187, 110);}
+        main{ background-color: #605f8f}
+        aside{ background-color: lightblue;}
+        footer{ background-color: rgb(75, 55, 187);
+        grid-column: 1/ span 3;} 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <header>header-고정</header>
+        <nav>nav-가변</nav>
+        <main>main-가변</main>
+        <aside>aside-가변</aside>
+        <footer>footer-고정</footer>
+    </div>
+
+</body>
+</html>
