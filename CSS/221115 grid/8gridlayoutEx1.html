@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gridlayout Ex1</title>
+    <style>
+        .box{ /* grid-container */
+        height: 60vh; width: 90%; margin: 50px auto; border: 6px solid rgb(160, 133, 204);
+        display: grid; color: #fff; font-weight: bold; font-size: 1.3em;
+        grid-template-columns:minmax(200px,25%) 1fr;  background-color: pink;
+        }
+
+        .box .item:nth-child(2){
+            background-color: #605f8f
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">min:200px / max:25%</div>
+        <div class="item">item2</div>
+    </div>
+</body>
+</html></HTml>

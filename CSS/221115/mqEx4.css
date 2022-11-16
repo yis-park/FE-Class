@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-/* @media () { } 링크에 미디어값을 작성했기 때문에 css 문서에서는 작성하지 않아도 됨. */
-.apple_watch {
-    flex-direction: row;
-}
-.apple_watch figcaption{
-    margin-left: 2vw;
-}

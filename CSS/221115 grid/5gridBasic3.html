@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>grid Basic3</title>
+    <style>
+        .box{ /* grid-container */
+             width: 90%; margin: 50px auto; border: 6px solid rgb(255, 61, 61);
+            display: grid;
+            grid-template: 100px 100px / 1fr 1fr; /* row / col */
+        }
+        .box .item{ background-color: rgb(83, 176, 252) ; color: #fff; font-weight: bold; font-size: 1.3em;}
+
+        .wrapper1 .item{ margin: 10px;}
+        .wrapper2 { /*간격의 역할을 하는 값. 컨테이너 역할 하는 곳에 값을 줌. grid-container, fle-container*/
+            gap:10px;
+            gap:10px 20px; /*row col*/
+        }
+        /* 마진과 갭의 차이
+        마진은 셀과 셀 사이의 간격을 벌리는게 아닌 셀 안에 있는 아이템 요소에 바깥여백
+        갭은 열과 열 사이에 여백(gutter) 행과 행 사이에 여백을 제어함. 두 개의 아이템 사이즈가 다름*/
+
+        .wrapper3 {
+            row-gap: 1vw; /* 행과 행 사이의 간격 */
+        }
+        .wrapper4 {
+            column-gap: 2vw; /* 열과 열 사이의 간격 */
+        }
+    </style>
+</head>
+<body>
+    <h1>grid 기본3</h1>
+    <h2>gab: 열과 행의 간격(gutters)</h2>
+    <div class="box wrapper1">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="box wrapper2">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="box wrapper3">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="box wrapper4">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+</body>
+</html>

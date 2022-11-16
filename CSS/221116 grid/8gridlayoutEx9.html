@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gridlayout Ex9</title>
+    <style>
+    body{ margin: 0;}
+    .border{ border:1px solid #000; width: 90%; height: 100vh; margin: 20px auto;
+    box-shadow: 3px 3px rgba(59, 46, 46, 0.527) ;}
+    .box{ display: grid; }
+    ul{display: grid; list-style: none; grid-template: repeat(4, 1fr) / repeat(2, 1fr); padding: 0;}
+    p{ text-align: right;}
+    ul li{ 
+        
+    }
+
+    p{ text-align: center; font-style: italic;}
+    span{ color: rgb(247, 191, 107);}
+
+    .container{
+        display: grid; place-items: center;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        border-top: 1px solid #000; padding-top: 50px ;
+        font-weight: bold; font-size: 1.2em;
+    }
+    .item{ width: 25vh; height: 25vh;
+        display: grid; place-items: center; color: #fff;
+        border-radius: 50%; margin: 20px auto;
+    }
+    .container .item1{ background-color: pink;}
+    .container .item2{ background-color: rgb(138, 72, 83);}
+    .container .item3{ background-color: rgb(246, 255, 192); color: #000;}
+    .container .item4{ background-color: rgb(192, 207, 255);}
+    .container .item5{ background-color: rgb(245, 192, 255);}
+    .container .item6{ background-color: rgb(197, 255, 192); color: #000;}
+    </style>
+</head>
+<body>
+    <div class="border">
+        <div class="box">
+            <ul>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+            </ul>
+            <p>경기도 수원시 팔달구 <span>더조은컴퓨터아카데미</span></p>
+        </div>
+        <div class="container">
+            <div class="item item1">item</div>
+            <div class="item item2">item</div>
+            <div class="item item3">item</div>
+            <div class="item item4">item</div>
+            <div class="item item5">item</div>
+            <div class="item item6">item</div>
+        </div>
+</div>
+</body>
+</html>

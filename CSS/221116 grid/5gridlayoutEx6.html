@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gridlayout Ex6</title>
+    <style>
+        body{ margin: 0; font-weight: bold; font-size: 1.2em; }
+        .box{
+            width: 60%;height: 60vh;
+            border: 5px solid #000; margin: 50px auto;
+            display: grid;   gap:2px;       
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+        .item:nth-child(odd) { background-color: #ecff43;}
+        .item:nth-child(even) { background-color: #7090fc;}
+    </style>
+</head>
+<body>
+    <!-- 조건
+        컨테이너의 크기가 아이템의 크기보다 커져도 아이템 확장되지 않음
+        컨테이너의 크기가 작아지면 아이템 자동 줄바꿈
+    -->
+    <div class="box">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+</body>
+</html>

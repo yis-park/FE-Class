@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gridlayout Ex10</title>
+    <style>
+        body{margin: 0; text-transform: uppercase; font-weight: bold; text-align: center;}
+        .container{/* grid-container*/
+            width: 90%; margin: 50px auto; 
+            /* border: 2px solid #000;  */
+            display: grid;
+            /* 4행row 3열col */
+            grid-template:40px 1fr 1fr 40px / 40px 1fr 40px ;
+        }
+        .container .vertical_text{ 
+            /* 세로 글자 */
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            letter-spacing: 2px;
+        }
+
+        .container header, .container footer{/* grid-item*/
+            background-color: #000; color: #fff;
+            /* grid-column: 1/5; 방법1 */
+            /* grid-column: span 4; 방법2, 방법3↓*/
+            grid-column: 1 / -1;
+
+            /* line-height: 40px; 방법1 */
+            /* display: flex; justify-content: center; align-items: center; 방법2, 방법3↓ */
+            display: grid; place-items: center;
+        }
+        .container .menu_side1{
+            background-color: #ddd;
+            border: 3px solid #000; border-top: none;
+            /* display: grid; place-items: center; */
+            display: flex; justify-content: center; align-items: center;
+        }
+        .container .menu_side1 .menu{ margin: 10px 0;}
+        .container .menu_side2 { /* grid-item*/
+            border-right: 3px solid #000; border-left: 3px solid #000; background-color:orange;
+            grid-column:1/2 ;}
+
+        .container .video_wrapper{
+            position: relative;
+            grid-column: 2/3; grid-row: 2/4;
+            overflow: hidden;
+        }
+
+        .container .video_wrapper video{
+            object-fit: cover; /*비율을 유지한 채 여백없이 채움 contain:비율 유지하고 여백 있음*/
+            position: absolute;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+        }
+        .container .video_wrapper h2{
+            position: absolute;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+            font-size: 3em; 
+        }
+
+        :is(.container) .txt_side1, .txt_side2 {
+            border-right: 3px solid #000; border-left: 3px solid #000;
+            background-color: rgb(192, 255, 110);
+            grid-column: -1 / -2; grid-row: 2/3;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .container .txt_side2{
+            grid-row: 3/4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>done is better than perpect(item)</header>
+        <aside class="menu_side1 vertical_text">
+            <span class="menu">menu1</span>
+            <span class="menu">menu2</span>
+            <span class="menu">menu3</span>
+        </aside>
+        <aside class="menu_side2"></aside>
+
+        <div class="video_wrapper">
+            <video src="./images/pexels-mikhail-nilov-8306858.mp4" muted autoplay loop></video>
+            <h2>grid</h2>
+        </div>
+
+        <aside class="txt_side1 vertical_text">item1</aside>
+        <aside class="txt_side2 vertical_text">item2</aside>
+
+        <footer>gird layout</footer>
+    </div>
+</body>
+</html>

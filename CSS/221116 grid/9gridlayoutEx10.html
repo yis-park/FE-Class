@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gridlayout Ex10</title>
+    <style>
+        body{ }
+        .container{
+            width: 90vw;  border: 2px solid #000; display: grid;
+            grid-template:40px 1fr 40px / 1fr 4fr 1fr ;
+            text-transform: uppercase; font-weight: bold;
+        }
+        header{ grid-column: 1/4;
+        background-color: pink;}
+        main{
+        grid-row: 2/3;
+        grid-column: 2/2;
+        z-index: 9; margin: 0;
+        }
+        nav{ background-color: rgb(134, 126, 126);
+        grid-row: 2/3;}
+        main video{
+            width: 80vw; vertical-align: top;
+            z-index: 99999;
+        }
+        aside{
+            background-color: rgb(13, 104, 28); grid-column: 3/4 ;grid-row: 2/4;
+        }
+        
+        footer{ grid-column: 1/4;
+        grid-row: 3/4;
+        background-color: maroon;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>done is better than perpect(item)</header>
+        <nav>nav</nav>
+        <main><video src="./images/sampleV.mp4" alt="mp4" muted autoplay loop>video</main>
+        <aside>item</aside>
+        <footer>gird layout</footer>
+    </div>
+</body>
+</html>
