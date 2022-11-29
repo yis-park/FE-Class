@@ -1,0 +1,27 @@
+<script>
+  /* 문자열 타입 변환 */
+
+  //String 생성자 함수를 이용한 변환
+  let num = 1; // 1 'number'
+  num = String(1); // 1 string "1" 숫자형 문자열
+  //num += 1;  11 string 숫자1과 문자 1 string
+  num -= 1; // 0 'number'
+  num = NaN; // NaN 'number'
+  num = String(NaN); // NaN string
+  num = true; // true 'boolean'
+  num = String(true); // true string 참거짓이 아닌 true라는 글자로 변환
+  console.log(num, typeof num);
+
+  //Object.prototype.toString(); 메서드 이동
+  let obj = (1).toString(); // 1 string "1" 숫자형 문자열
+  // obj +=1; 11 string
+  obj = NaN.toString(); // NaN string
+  obj = false.toString(); // false string
+  console.log(obj, typeof obj);
+
+  // 더하기 연산자 이용
+  let str = 1 + ""; // 빈문자열 이용 1 string "1" 숫자형 문자열
+  str = NaN + ""; // NaN string
+  str = true + ""; // true string
+  console.log(str, typeof str);
+</script>

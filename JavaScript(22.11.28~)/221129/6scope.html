@@ -1,0 +1,57 @@
+<script>
+  /*
+  scope 범위
+
+  funtion level scope: 함수 내에서만 유효한 범위
+  block level scope: {} 안에서만 유효한 범위. if, for문 등 다른 문에서도 가능
+  */
+
+  // 전역 변수 선언
+  var x = 100,
+    y = 200,
+    z = 300;
+
+  // 함수 선언
+  function num() {
+    var x = "지역 변수";
+    y = "전역 변수"; // var 키워드 생략시 전역변수
+
+    console.log(`x: ${x}`);
+    console.log(`z: ${z}`);
+  }
+
+  console.log(`x: ${x}`);
+  console.log(`y: ${y}`);
+  console.log(`z: ${z}`);
+  console.log(`----------함수호출------------`);
+  num(); //함수 호출, 지역변수, 300
+  console.log(`x: ${x}`); // 100
+  console.log(`y: ${y}`); // 전역 변수
+  console.log(`z: ${z}`); // 300
+
+  var a = 100;
+  {
+    var a = 200;
+  }
+  console.log(`a: ${a}`); // 200. 변수 var 키워드는 함수의 범위만 인식하기 때문에 중괄호를 씌워놔도 전역변수가 됨.
+
+  let b = 200;
+  let c = 300;
+  {
+    let b = 300;
+    c = 500;
+    console.log(`{}안의 b: ${b}`); // 300
+  }
+  console.log(`{}밖의 b: ${b}`); //200
+  console.log(`c: ${c}`); //500 재선언은 되지 않았지만 재할당됨. 블럭문 안에서 let으로 선언되지 않았기 때문에(키워드 없이 작성되었기 때문에) 전역으로 인식
+
+  /* 
+  var a =10;
+  var a =20; 허용됨
+  a = 30; 허용됨
+
+  let b =10;
+  let b= 20; 허용안됨
+  b = 30; 허용됨
+  */
+</script>

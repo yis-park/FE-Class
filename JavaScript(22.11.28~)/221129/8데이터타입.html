@@ -1,0 +1,70 @@
+<script>
+  // 데이터 타입
+
+  // String 문자열
+  let str = "string1";
+  str = "string2";
+  str = `백틱 ES6+`;
+  str = "큰 따옴표로 감싼 문자열 내의 '작은 따옴표'는 문자열이다.";
+  str = '작은 따옴표로 감싼 문자열 내의 "큰 따옴표"는 문자열이다.';
+  str = `작은 따옴표로 감싼 문자열 내의 "큰 따옴표", '작은 따옴표'는 문자열이다.`;
+
+  str = "string3"; // 인덱스 번호는 0~6 까지이고 총 갯수는 7
+  str = str.toUpperCase(); // 대문자 변환. 재할당으로 값을 줌
+  str = str.toLowerCase(); // 소문자 변환.
+  str = str.substring(1, 5); // .substring(시작인덱스, 마지막인덱스(미포함)) trin 출력
+  console.log(`${typeof str} : ${str}`);
+  console.log(str.length); // .length 요소의 갯수 -> 7 .substring줘서 값이 4로 바뀜
+
+  // Number 숫자
+  console.log(`---- number ----`);
+  let num = 10; // 양의 정수
+  num = 1.1; // 실수
+  num = -1.1; // 음의 정수
+
+  console.log(num);
+
+  // Boolean 논리
+  console.log(`---- Boolean ----`);
+  let boo = true; // ==1
+  boo = false; // ==0 거짓
+  console.log(`${typeof boo} : ${boo}`);
+
+  // undefined
+  // 선언은 되었지만 값이 할당되지 않은 변수에 접근할 때
+  // 존재하지 않는 객체 프로퍼티에 접근할 경우
+  // 개발자가 의도적으로 할당한 값이 아닌 자바스크립트 엔진에 의해 초기화 된 값
+  console.log(`---- undefined ----`);
+  let a;
+  console.log(a);
+
+  // null
+  // 값 없음. 개발자가 의도적으로 변수에 값을 넣지 않음을 명시할 때 사용. 개발자의 의지
+  console.log(`---- null ----`);
+  a = null; // null로 재할당
+  console.log(a); //null
+
+  // Object 객체
+  console.log(`---- Object ----`);
+  let obj = {
+    name: "js",
+    num: 1,
+  };
+  console.log(`${typeof obj} : ${obj}`);
+
+  // function 함수
+  console.log(`---- function ----`);
+  let fn = function () {};
+  console.log(`${typeof fn} : ${fn}`);
+
+  // Array 배열. 하나의 변수에 여러 값을 저장. 인덱스 번호로 제어
+  console.log(`---- Array ----`);
+  let arr = [`a`, 2, obj, boo, function () {}];
+  console.log(`${typeof arr} : ${arr}`);
+
+  // Symbol 심볼. 변경 불가능한 원시타입으로 주로 유일한 객체 프로퍼티 키를 만들기 위해 사용
+  console.log(`---- Symbol ----`);
+  let sym = Symbol(`sym`);
+  console.log(sym);
+  console.log(typeof sym); //symbol
+</script>
