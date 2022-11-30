@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>if 조건문Ex</title>
+    <script>
+      // 숫자를 입력 받아 홀수 짝수를 출력
+      // n은 홀수입니다, n은 짝수입니다.
+
+      let num = prompt("원하는 숫자를 입력해주세요.", "이곳에 작성하세요");
+
+      if (num % 2 === 0) {
+        alert(`${num}은/는 짝수입니다.`);
+      } else {
+        alert(`${num}은/는 홀수입니다.`);
+      }
+
+      // 삼항연산자
+      // (조건) ? 참 : 거짓
+      num % 2 === 0
+        ? alert(`${num}은/는 짝수입니다.`)
+        :() ? xxx //중첩도 가능은 하나 요즘은 잘 쓰지 않음
+        :alert(`${num}은/는 홀수입니다.`)
+        ;
+
+      /* let obj =(num % 2 === 0) ? alert(`${num}은/는 짝수입니다.`) :alert(`${num}은/는 홀수입니다.`) 이렇게도 변수에 대입해 작성도 가능. */
+    </script>
+  </head>
+  <body></body>
+</html>
