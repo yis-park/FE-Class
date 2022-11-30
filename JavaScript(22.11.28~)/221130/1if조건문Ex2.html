@@ -4,7 +4,19 @@
     확인 버튼 클릭시 탈퇴 되었습니다 출력
     취소 버튼 클릭시 탈퇴 취소 되었습니다 출력
   */
-  let out = confirm("회원 탈퇴하시겠습니까?");
+  let member = confirm("회원 탈퇴하시겠습니까?");
 
-  if ()
+  // === '완전히 같다' 데이터의 타입까지 같다
+  // -- '같다' 데이터의 타입은 다를 수 있으나 값이 같다
+  // if (member === true) {true 데이터 타입까지 같다
+  // if (member === 1) { false 데이터 타입이 다르기 때문에
+  // if (member == 1) { true
+  /*
+  if (member) {
+    alert("탈퇴 되었습니다");
+  } else {
+    alert("탈퇴 취소 되었습니다");
+  }
+  */
+  member ? alert("탈퇴 되었습니다") : alert("탈퇴 취소 되었습니다");
 </script>

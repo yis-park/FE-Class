@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>switch선택문Ex4 다시보기</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // 아이디를 입력 받아 일치하면 비밀번호 입력을 받고
+      // 비밀번호 참인경우 '로그인 되었습니다.'
+      // 아이디가 일치하지 않으면  아이디가 일치하지 않습니다 출력
+
+      const defaultId = "web";
+      const defaultPw = "1234";
+
+      let userId = prompt("아이디를 입력하세요.");
+
+      switch (userId === defaultId) {
+        case true: // 아이디가 참인 경우
+          alert("아이디 인증이 완료되었습니다.");
+
+          let userPw = prompt("비밀번호를 입력하세요.");
+          userPw = Number(userPw); //문자->숫자
+
+          switch (userPw) {
+            case defaultPw:
+              alert("로그인 되었습니다.");
+              break;
+            default:
+              alert("다시 시도해 주십시오.");
+          }
+        default: //아이디가 거짓인 경우
+          alert("아이디가 일치하지 않습니다.");
+          break;
+      }
+    </script>
+  </body>
+</html>

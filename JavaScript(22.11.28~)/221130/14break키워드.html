@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>break 키워드(예약어)</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // 3의 배수로 0~100까지 출력
+      for (let k = 0; k <= 100; k += 3) {
+        if (k >= 40) {
+          // 이 값이 참인 경우 실행문 실행.40이 넘어가는 수는 브레이크걸려서 브라우저에 보이지 않음.
+          break; //제어문을 벗어날 때 사용
+        }
+
+        document.writeln(k); // 한 칸 띄어서 문서에 작성
+      }
+    </script>
+  </body>
+</html>

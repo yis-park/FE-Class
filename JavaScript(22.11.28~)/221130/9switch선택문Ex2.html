@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>switch선택문Ex2</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // 1~4 사이의 숫자를 입력하면 해당 번호의 이미지 출력
+      let num = prompt(`1~4번까지의 숫자를 입력하세요`);
+      //num = +num; 문자열 -> 숫자
+      let url = "";
+
+      switch (num) {
+        case null:
+          url: `<h2>취소했습니다.</h2>`;
+          break;
+        case "1":
+          // document.body.innerHTML =
+          //   '<img src="https://unsplash.it/300/200?image=10" alt="img1">';
+          url = '<img src="https://unsplash.it/300/200?image=10" alt="img1">';
+          break;
+        case "2":
+          // document.body.innerHTML =
+          //   '<img src="https://unsplash.it/300/200?image=15" alt="img2">';
+          url = '<img src="https://unsplash.it/300/200?image=15" alt="img2">';
+          break;
+        case "3":
+          // document.body.innerHTML =
+          //   '<img src="https://unsplash.it/300/200?image=12" alt="img3">';
+          url = '<img src="https://unsplash.it/300/200?image=12" alt="img3">';
+          break;
+        case "4":
+          // document.body.innerHTML =
+          //   '<img src="https://unsplash.it/300/200?image=13" alt="img4">';
+          url = '<img src="https://unsplash.it/300/200?image=13" alt="img4">';
+          break;
+
+        default:
+          // document.body.textContent = "해당 번호만 입력해주세요";
+          url = `<h2>해당 번호만 입력해주세요</h2>`;
+      }
+
+      document.body.innerHTML = url;
+    </script>
+  </body>
+</html>

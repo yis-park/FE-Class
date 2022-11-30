@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>if 조건문 Ex5</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // 입력한 점수에 따라 상(100~81), 중(80~61), 하(60~41), 탈락(40~0) 출력
+      // document.body.textContent = "점수를 입력해 주세요";
+
+      let score = prompt("점수를 입력해주세요.");
+
+      /* if (score  <= 100 && 81 <= score) {
+        document.body.innerHTML = '<h2>${score}점은 "상" 입니다.</h2>';
+        // alert("${score}점은 상입니다.");
+      } else if (score >= 61 && 80 >= score) {
+        document.body.innerHTML = '<h2>${score}점은 "중" 입니다.</h2>';
+      } else if (score >= 41 && 60 >= score) {
+        document.body.innerHTML = '<h2>${score}점은 "하" 입니다.</h2>';
+      } else if (40 >= score && score >= 0) {
+        document.body.innerHTML = '<h2>${score}점은 "탈락" 입니다.</h2>';
+      } else {
+        document.body.textContent = "점수만 입력해 주세요";
+      } */
+
+      let grade = ""; // 문자열로 초기화
+      if (score === null) {
+        // 취소 버튼 눌렀을 때
+        document.body.textContent = "입력이 취소되었습니다.";
+      } else if (score <= 100 && 81 <= score) {
+        grade = "상";
+      } else if (score >= 61 && 80 >= score) {
+        grade = "중";
+      } else if (score >= 41 && 60 >= score) {
+        grade = "하";
+      } else if (40 >= score && score >= 0) {
+        grade = "재평가";
+      } else {
+        document.body.textContent = "점수만 입력해 주세요";
+      }
+
+      if (score >= 0 && score <= 100 && score !== null) {
+        document.body.innerHTML = `<h2>${score}점은 ${grade} 입니다.</h2>`;
+      }
+
+      // 삼항연산자 (피연산자가 세 개인 연산자. 주로 조건문에서 사용)
+      score === ""
+        ? (document.body.textContent = "내용을 입력해주세요")
+        : false;
+
+      /* 이렇게도 쓸 수 있음
+        if(score === "") {
+          document.body.textContent = "내용을 입력해주세요"
+        }
+        */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>switch선택문Ex3</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // 입력받은 커피와 가격 출력
+      // 아메리카노 : 15000, 카페라떼 : 20000, 카페모카 : 20000, 바닐라라떼 : 25000
+
+      /*  내가한거
+      `주문한 커피는 xx이고 가격은 xxx입니다.`;
+      let menu = prompt(
+        `아메리카노, 카페라떼, 카페모카, 바닐라라떼`,
+        `드시고 싶은 음료를 적어주세요.`
+      );
+
+      switch (menu) {
+        case "아메리카노":
+          document.body.innerHTML = `주문한 커피는 ${menu}이고 가격은 15,000원 입니다.`;
+          break;
+        case "카페라떼":
+          document.body.innerHTML = `주문한 커피는 ${menu}이고 가격은 20,000원 입니다.`;
+          break;
+        case "카페모카":
+          document.body.innerHTML = `주문한 커피는 ${menu}이고 가격은 20,000원 입니다.`;
+          break;
+        case "바닐라라떼":
+          document.body.innerHTML = `주문한 커피는 ${menu}이고 가격은 25,000원 입니다.`;
+          break;
+
+        default:
+          document.body.textContent = "해당 음료만 적어주세요";
+          break;
+      } */
+
+      const coffee = prompt(
+        `아메리카노, 카페라떼, 카페모카, 바닐라라떼 중 선택하세요.`
+      );
+      let price = 0; // 숫자로 변수 초기화
+
+      switch (coffee) {
+        case "아메리카노":
+          price = 15000;
+          break;
+        case "카페라떼":
+          price = 20000;
+          break;
+        case "카페모카":
+          price = 20000;
+          break;
+        case "바닐라라떼":
+          price = 25000;
+          break;
+
+        default:
+          document.body.innerHTML = `<h2>메뉴에 있는 커피만 주문 가능합니다.</h2>`;
+      }
+
+      if (price) {
+        document.body.innerHTML = `<h2>주문한 커피는 ${coffee}이고 가격은 ${price}원 입니다.</h2>`;
+      }
+    </script>
+  </body>
+</html>
