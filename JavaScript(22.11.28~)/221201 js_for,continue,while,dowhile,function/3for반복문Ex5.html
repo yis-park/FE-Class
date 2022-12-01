@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>for반복문Ex5</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // 입력받은 구구단 출력
+      // 2~9단 외의 숫자 입력시 에러 메시지 출력
+
+      /* 나혼자 해본거
+      let sum = 0;
+      let getNum = prompt(`2~9 사이의 숫자만 작성하세요.`);
+      if ((getNum = 2)) {
+        for (let i = 1; i <= 9; i++) {
+          let sum = 2 * i;
+          document.write(`<p>2 * ${i} = ${sum} </p>`);
+        }
+      } else if ((getNum = 3)) {
+        for (let i = 1; i <= 9; i++) {
+          let sum = 3 * i;
+          document.write(`<p>3 * ${i} = ${sum} </p>`);
+        }
+      } else {
+        document.write(`<h3>Error</h3>`);
+      } */
+
+      let getNum = prompt(`2~9 사이의 숫자만 작성하세요.`);
+
+      if (getNum >= 2 && 9 >= getNum) {
+        document.write(`<h3>----${getNum}단----</h3>`);
+        for (let i = 1; i <= 9; i++) {
+          let sum = getNum * i;
+          document.write(`${getNum}*${i}=${sum}<br>`);
+        }
+      } else {
+        //입력 받은 숫자가 2~9가 아니면
+        alert(`Error`);
+      }
+    </script>
+  </body>
+</html>

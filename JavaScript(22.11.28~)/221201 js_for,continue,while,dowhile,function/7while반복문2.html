@@ -1,0 +1,17 @@
+<script>
+  let i = 0;
+  while (i < 5) {
+    console.log(i++);
+    //(i++)/(++i)의 값 각 다름
+  }
+  let k = 0;
+  while (true) {
+    // 한계가 설정되지 않았기 때문에 무한반복. 반드시 빠져나올 수 있는 조건 필요
+    console.log(k++);
+    if (k === 5) {
+      console.log(`여기서멈춤. ${k}`);
+      break;
+      console.log(`변수${k}`);
+    }
+  }
+</script>

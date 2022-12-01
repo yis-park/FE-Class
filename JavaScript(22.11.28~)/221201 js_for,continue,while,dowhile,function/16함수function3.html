@@ -1,0 +1,31 @@
+<script>
+  // 익명 함수 표현식
+  // 매개변수 1
+  const sum1 = function (wt) {
+    console.log(`가로 : ${wt}`);
+  };
+  sum1(100);
+
+  // 매개변수 2개이상일때
+  const sum2 = function (wt, ht) {
+    console.log(`가로: ${wt}, 세로: ${ht}`);
+    console.log(wt * ht);
+  };
+  sum2(10, 20);
+  sum2(50, 3);
+
+  console.log(`---------`);
+  //ES6+ 매개변수에 기본값 부여해서 쓸 수 있는 방식
+  const sum3 = function (wt, ht, dt = 5) {
+    console.log(`박스 부피는? ${wt * ht * dt}`);
+  };
+  // sum3(10, 5, 3); // wt:10, ht:5, dt:3 ->150 위에 dt값 줬어도 3으로 계산
+  sum3(10, 12); // wt:10, ht:12, dt:undefined -> NaN. 펑션에 값을 5로 주면 계산이 됨. ->600
+
+  console.log(`---------`);
+  const sum4 = function num(a, b) {
+    console.log(a * b);
+  };
+  // num(2, 7); 변수에 할당된 경우 함수명으로 호출시 에러. 외부에서 내부의 함수명에 접근 불가능 Uncaught ReferenceError
+  sum4(2, 7);
+</script>

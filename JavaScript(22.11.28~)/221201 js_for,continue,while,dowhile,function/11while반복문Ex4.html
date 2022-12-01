@@ -1,0 +1,26 @@
+<script>
+  // 2~9단 구구단 출력
+
+  let i = 2;
+  let k = 1;
+
+  while (i <= 9) {
+    //1~9단
+    console.log(`----${i}단----`);
+    while (k <= 9) {
+      console.log(`${i}*${k} =${i * k}`);
+      k++; // 반복문을 들면서 최종적으로 변수 k = 9 출력, 실제값은 10을 가지니 (k <= 9) 이 값은 false가 되어 실행되지 않음
+    }
+    i++;
+    k = 1; //1로 재할당하여 초기화
+  }
+  /*
+  while (i <= 9) {
+    //1~9단
+     console.log(`----${i단}----`);
+    console.log(`${i}*1 = ${i * 1}`);
+    console.log(`${i}*2 = ${i * 2}`);
+    console.log(`${i}*3 = ${i * 3}`); 
+  }
+  */
+</script>
