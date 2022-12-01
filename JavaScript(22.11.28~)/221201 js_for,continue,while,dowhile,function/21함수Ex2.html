@@ -1,27 +1,27 @@
 <script>
   // 입력한 언어에 따른 인사말 출력
 
-  /* 내가해본거;... 쉽지않다 와 이거 핵어렵
-    const lang = (`ko`,`en`,`ch`, `jp`) =>{
-      console.log(`${ko}는 안녕하세요`);
-      console.log(`${en}는헬로우`);
-      console.log(`${ch}는니하오`);
-      console.log(`${jp}는오하요`);
-    }
-   lang = (`한국어`,`영어`,`중국어`,`일본어`); */
+  // 내가해본거;... 쉽지않다 와 이거 핵어렵
+  //   const lang = (ko,en,ch,jp) =>{
+  //     console.log(`${ko}는 안녕하세요`);
+  //     console.log(`${en}는 헬로우`);
+  //     console.log(`${ch}는 니하오`);
+  //     console.log(`${jp}는 오하요`);
+  //   }
+  //  lang(`프랑스어`,`영어`,`중국어`,`일본어`);
 
   const 인사말 = (lang) => {
     let msg = ``;
     if (lang === "영어") {
-      msg = `헬로우`;
+      msg = `영어는 헬로우`;
     } else if (lang === "중국어") {
-      msg = `니하오`;
+      msg = `중국어는 니하오`;
     } else if (lang === "일본어") {
-      msg = `오하요`;
+      msg = `일본어는 오하요`;
     } else if (lang === "한국어") {
-      msg = `안녕하세요`;
+      msg = `한국어는 안녕하세요`;
     } else {
-      msg = `정해진 값만 넣어주세요.`;
+      msg = lang + `(은)는 몰라요.`;
     }
 
     console.log(msg);
@@ -31,5 +31,5 @@
   인사말(`영어`); // 헬로우
   인사말(`중국어`); // 니하오
   인사말(`일본어`); // 오하요
-  인사말(`프랑스어`); // 오하요
+  인사말(`프랑스어`);
 </script>
