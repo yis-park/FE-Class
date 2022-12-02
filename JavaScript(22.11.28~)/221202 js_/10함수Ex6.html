@@ -1,0 +1,12 @@
+<script>
+  // 입력한 값의 부가세 포함 가격을 출력
+  //1000(제품가격)*0.1(부가세) +100(제품가격)=1100
+
+  function price(num) {
+    console.log(`입력한 금액의 부가세 포함 가격은 ${num * 1.1}엔 입니다.`);
+  }
+  price(2500);
+
+  const sum = (num) => num * 0.1 + num;
+  console.log(`입력한 금액의 부가세 포함 가격은 ${sum(2470)}엔 입니다.`);
+</script>
