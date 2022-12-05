@@ -257,7 +257,7 @@ main .contents2 .grid .flex .txt h3 span::after {
   background-color: var(--themecolor);
   position: absolute;
   top: 140px;
-  left: 306px;
+  left: 475px;
   z-index: -9999;
 }
 main .contents2 .grid .flex .txt h3 {
@@ -369,3 +369,91 @@ main .contents3 .video a span:hover {
 }
 
 /******contents4********/
+main .contents4 {
+  position: absolute;
+  top: 3000px;
+  width: 100%;
+  padding: 0 108px 108px 108px;
+}
+main .contents4 .h3 h3 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 48px;
+}
+main .contents4_ul .flex_ul {
+  display: flex;
+  flex: row wrap;
+}
+
+main .contents4_ul .flex_ul li {
+  width: 50%;
+
+  color: #fff;
+
+  padding: 24px 0;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.5s;
+  cursor: pointer;
+}
+main .contents4_ul .flex_ul .tab1 {
+  background-color: var(--themecolor);
+}
+
+main .contents4_ul .flex_ul li {
+  background-color: var(--bs-body-color);
+}
+main .contents4_ul .flex_ul .tab2:hover .tab1 {
+  background-color: var(--bs-body-color);
+}
+main .contents4_ul .flex_ul li:hover {
+  background-color: var(--themecolor);
+}
+main .flex_tab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #333;
+  padding: 0 12px;
+  height: 700px;
+}
+main .flex_tab h3 {
+  font-weight: 600;
+  font-size: 27px;
+}
+main .flex_tab p {
+  color: var(--bs-body-color);
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+main .flex_tab .flex_tab_center {
+  width: 32%;
+  height: 80%;
+  vertical-align: middle;
+  position: relative;
+}
+main .flex_tab img {
+}
+main .flex_tab .flex_tab_left {
+  width: 32%;
+  text-align: right;
+  position: relative;
+}
+main .flex_tab .flex_tab_right {
+  width: 32%;
+  text-align: left;
+  position: relative;
+}
+
+main .flex_tab .flex_tab_right .flex_tab_right_se,
+.flex_tab_right_th,
+main .flex_tab .flex_tab_left .flex_tab_left_se,
+.flex_tab_left_th {
+  margin-top: 48px;
+}
