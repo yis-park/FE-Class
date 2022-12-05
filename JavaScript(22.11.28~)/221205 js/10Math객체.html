@@ -1,0 +1,86 @@
+<script>
+  // Math 객체 수학과 함수를 위한 프로퍼티와 메서드를 제공하는 내장객체
+  // https://ko.javascript.info/number
+
+  console.log(Math.PI); //3.141592653589793
+
+  // .abs(); 절대값으로 반환. 0 혹은 양수
+  let abs = Math.abs(4); //abs: 4
+  abs = Math.abs(3.141592658749569); //abs: 3.141592658749569
+  abs = Math.abs(-3.141592658749569); //abs: 3.141592658749569. 양수로 반환
+  abs = Math.abs("-1"); //abs: 1. 숫자형 문자열을 숫자로 자동반환 후 양수로 반환.
+  abs = Math.abs(null); //abs: 0
+  abs = Math.abs(undefined); //abs: NaN(숫자가 아니다)
+  abs = Math.abs(); //abs: NaN(숫자가 아니다)
+  abs = Math.abs("string"); //abs: NaN(숫자가 아니다)
+  console.log(`abs: ${abs}`);
+
+  // .round(); 소수점 이하 반올림하여 정수로 반환. 많이 사용되진 않음
+  let round = Math.round(31.145); //round: 31
+  round = Math.round(31.545); //round: 32
+  round = Math.round(-31.545); //round: -32
+  round = Math.round(-31.145); //round: -31
+  console.log(`round: ${round}`);
+
+  // .ceil(); 소수점 이하 올림하여 정수로 반환
+  let ceil = Math.ceil(1.2); //ceil: 2
+  ceil = Math.ceil(-1.2); //ceil: -1
+  console.log(`ceil: ${ceil}`);
+
+  // .floor(); 소수점 이하 내림하여 정수로 반환
+  let floor = Math.floor(1.8); // floor: 1
+  floor = Math.floor(-1.8); // floor:-2
+  floor = Math.floor(-9.1); // floor:-10
+  console.log(`floor: ${floor}`);
+
+  // .trunc(); 절삭. 소수점이하 삭제하고 정수로 반환
+  let trunc = Math.trunc(1.9); // trunc: 1
+  trunc = Math.trunc(-1.8); // trunc: -1
+  trunc = Math.trunc(-9.1); // trunc: -9
+  console.log(`trunc: ${trunc}`);
+
+  // .sqrt(); 제곱근
+  console.log(Math.sqrt(9)); //3
+
+  // .random(); 0~1 사이의 랜덤 실수 반환. 0은 포함되나 1은 포함되지 않음. 정말 많이 사용.트렁크, 라운드와 함께 사용
+  console.log(`random: ${Math.random()}`); // random: 0.5173466813634671
+  // 10까지의 정수 *10, 1000까지의 정수 *1000, 50까지의 정수 *50
+  // 1~100까지의 랜덤 정수 반환
+  //let ran = Math.random() * 100; // 66.32021270595472 0.xxxxx~99.xxxxx; 1은 포함되지 않기 때문에 100이 나올 수 없음.
+  let ran = Math.random() * 100 + 1; // 101.xxxxx 등의 값도 나올 수 있음.
+  ran = Math.trunc(ran); //그럼 이제 정수로 보여짐
+  console.log(ran);
+
+  // .min(); 제일 작은 값 반환
+  console.log(Math.min(0.5, 5, 10, 20)); // 0.5
+
+  // .max(); 제일 큰 값 반환
+  console.log(Math.max(0.5, 5, 10, 20)); // 20
+
+  // .toFixed(); 소수점 이하 몇자리까지만 출력
+  let random = Math.random();
+  random = random * 10 + 1;
+  console.log(random.toFixed(3)); //4.447
+
+  // isNaN; NaN이면 true,  NaN이 아니면(숫자) flase 반환. NaN 판별
+  let str = "13"; // 숫자형 문자열은 isNaN에서 숫자로 인식. 엄격한 구분은 아님
+  console.log(typeof str); // string
+  console.log(isNaN(str)); // false
+  str = "문자";
+  console.log(isNaN(str)); // true. 문자이기 때문에 숫자가 아님. 따라서 true
+  console.log(NaN === NaN); // false
+
+  const output = prompt(`숫자를 입력하세요.`);
+  /* if (isNaN(output)) {
+    // true Not a Number가 맞다. 즉 숫자가 아니다
+    console.log(`너 글자. 숫자 넣으라고오오오`);
+  } else {
+    //false. 숫자
+    console.log(`${output} 너 숫자. 잘해따아아아`);
+  } */
+  console.log(
+    isNaN(output)
+      ? `너 글자. 숫자 넣으라고오오오`
+      : `${output} 너 숫자. 잘해따아아아`
+  );
+</script>

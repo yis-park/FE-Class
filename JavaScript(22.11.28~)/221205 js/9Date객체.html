@@ -1,0 +1,27 @@
+<script>
+  // Date 객체 : 날짜와 시간을 생성하는 내장 객체이자 생성자 함수
+  // https://ko.javascript.info/string
+
+  console.log(new Date()); // Mon Dec 05 2022 15:38:07 GMT+0900 (한국 표준시)
+  console.log(new Date().getFullYear()); // 년. 2022
+  const now = new Date();
+  console.log(now.getMonth() + 1); // 월. 11 0~11까지 반환. +1 써서 계산해서 현재월을 알려줌. 12
+  console.log(now.getDate()); //5 날짜.
+  console.log(now.getDay()); //1 요일. 0~6까지 반환 0:일요일 1:월요일
+  console.log(now.getHours()); //15 시간 0~23
+  console.log(now.getMinutes()); //42 분 0~59
+  console.log(now.getSeconds()); //46 초 0~59
+
+  // 참고
+  console.log(now.getTime()); //1670222742590 1970년 1월 1일 이후의 밀리세컨초로 표기 1/1000
+  console.log(now.getTimezoneOffset()); // -540. 현지 시간과 표준 시간의 차이(분)을 반환
+
+  // 날짜 구성요소를 설정
+  console.log(now.setHours(2)); // 시간 설정. 매개변수 값 줘야함.
+
+  // 문자열 날짜 반환
+  console.log(now.toString()); // Mon Dec 05 2022 02:53:55 GMT+0900 (한국 표준시)
+  console.log(now.toDateString()); // Mon Dec 05 2022
+  console.log(now.toTimeString()); // 02:55:39 GMT+0900 (한국 표준시)
+  console.log(new Date(`2020/05/7/12:22`).toString()); // Thu May 07 2020 12:22:00 GMT+0900 (한국 표준시)
+</script>

@@ -1,0 +1,45 @@
+<script>
+  /*
+      생성자 함수로 이름과 특징을 가진 객체를 만들고 출력
+      우리 집 반려 동물, 식물, ... 소개
+      객체 속성: 이름, 성격, 특징, 메서드(console.log(우리집 ${이름}은 ${성격} 이고 ${특징}을 잘합니다.))
+      콘솔에 메서드 출력
+    */
+
+  /* 내가 해본거
+  function Rabbit(name, personality, feature) {
+    this.name = name;
+    this.personality = personality;
+    this.feature = feature;
+    this.order = function () {
+      console.log(
+        `우리집 ${this.name}은(는) ${this.personality}고 ${this.feature}을(를) 잘합니다.`
+      );
+    };
+  }
+
+  let ani = new Rabbit(`누룽지`, `애교가 많`, `무엇이든 씹어먹기`);
+  ani.order();
+  ani = new Rabbit(`로즈/마리`, `조용하`, `혼자서도 잘 자라는 것`);
+  ani.order();
+  */
+
+  //매개변수로 해보기
+  function Companion(name, personality, feature) {
+    this.이름 = name;
+    this.성격 = personality;
+    this.특징 = feature;
+    this.소개 = function () {
+      console.log(
+        `우리집 ${this.이름}은(는) ${this.성격}고 ${this.특징}을(를) 잘합니다.`
+      );
+    };
+  }
+
+  new Companion(`누룽지`, `애교가 많`, `무엇이든 씹어먹기`).소개();
+  /* new Companion().소개();
+  new Date().getHours(); */
+  let = new Companion("누룽지", "귀엽", "간식보면 달려오기");
+  누룽지.소개();
+  console.log(누룽지.성격);
+</script>

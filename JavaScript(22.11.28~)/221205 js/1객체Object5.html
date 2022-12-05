@@ -1,0 +1,17 @@
+<script>
+  const noName = {
+    // 일반 함수
+    // this 키워드. (객체 내부에서 this 키워드 사용했을 때) 일반함수,화살표함수에 따라 'this 키워드' 지칭하는게 다름
+    func: function () {
+      console.log(this); // 일반함수에서 유용하게 사용. 객체 내부의 메소드에서 자신(noName)을 가리키는 키워드
+    },
+
+    // 화살표 함수
+    arrow: () => {
+      console.log(this); // 화살표 함수에서 this의 참조 대상은 window 객체. 혹은 상황에 따라 다른 객체를 참조하기도 함.
+    },
+  };
+
+  noName.func();
+  noName.arrow();
+</script>

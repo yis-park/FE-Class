@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>전역 객체</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>전역 객체</h1>
+    <p>모든 객체의 유일한 최상위 객체를 의미</p>
+    <ul>
+      <li>window 객체(브라우저 쪽</li>
+      <li>global 객체(none.js 쪽)</li>
+    </ul>
+
+    <script>
+      // 브라우저
+      console.log(this === window); // true
+
+      // 터미널
+      // this === global; ture(브라우저에선 안떴는데 node.js 프로그램에서 true 확인함)
+
+      /*
+      window.document.getElementById('id');
+      전역 객체의 자식 객체를 사용할 때는 전역 객체인 window 생략 가능
+      document.getElementById('id'); 아이디 탐색
+      document.getElementsByClassName('class'); 클래스 선택자 탐색. 제일 처음 탐색 클래스 값만 배열로 반환
+      document.getElementsByTagName('p'); 타입 선택자 탐색. 제일 처음 탐색 클래스 값만 배열로 반환
+
+      window.alert('전역객체');
+      alert('전역객체');
+      */
+
+      function naver(url) {
+        let location = {
+          // 로케이션 이라는 이름을 가진 객체 생성(이렇게 잘 쓰진 않음)
+          href: "이동할 사이트는 ",
+        };
+
+        alert(location.href + url); // 윈도우에 있는 하위객체 로테이션이 아닌 내가 만든 객체 location의 href 키를 불러온 다음 매개변수 url 더함
+        // 소괄호, 대괄호 등 붙여야 할지 잘 모르겠으면 콘솔에서 window 쳐서 예시로 보기(윈도우에 웬만한거 다 있음)
+        // location.href = url;  내가 만든 객체인 location의 키로 인식
+        // console.log(location); {href: 'https://naver.com'}
+        window.location.href = url; // window 객체 안에 있는 location 객체가 가지고 있는 href 속성이 적용되어 해당 페이지로 이동. 윈도우 앞에 적어줘야 원하는 로케이션 값으로 적용됨
+      }
+
+      naver(`https://naver.com`);
+    </script>
+  </body>
+</html>
