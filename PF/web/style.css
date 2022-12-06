@@ -216,10 +216,11 @@ main .contents2 {
   top: 1000px;
   width: 100%;
   height: 1000px;
+  padding: 108px;
 }
 main .contents2 .grid {
   display: grid;
-  padding: 48px;
+  /* padding: 48px; */
   grid-template: 400px 400px / 400px 400px 400px;
   gap: 50px;
   justify-content: center;
@@ -258,8 +259,8 @@ main .contents2 .grid .flex .txt h3 span::after {
   width: 149px;
   background-color: var(--themecolor);
   position: absolute;
-  top: 140px;
-  left: 475px;
+  top: 200px;
+  left: 475px; /*475px*/
   z-index: -9999;
 }
 main .contents2 .grid .flex .txt h3 {
@@ -515,6 +516,12 @@ main .contents6 .container {
   display: flex;
   height: 400px;
   padding: 0 12px;
+  cursor: pointer;
+}
+main .contents6 .container .hover:hover {
+  transform: scale(1.05);
+  transition: all;
+  transition: 0.5s;
 }
 main .contents6 .container h3 {
   font-size: 36px;
@@ -545,7 +552,7 @@ main .contents6 .container .flex_th {
 main .contents7 {
   position: absolute;
   top: 5300px;
-  height: 1200px;
+  height: 1300px;
   color: var(--bs-body-color);
   width: 100%;
   padding: 108px;
@@ -575,6 +582,7 @@ main .contents7 .conainer .grid .gridtx {
   flex-wrap: wrap;
   flex-direction: column;
   text-align: left;
+  cursor: pointer;
 }
 main .contents7 .conainer .grid .grid_fr {
   grid-row: 1/3;
@@ -613,4 +621,29 @@ main .contents7 .conainer .grid .grid_ei {
 }
 main .contents7 .conainer .grid .grid_ei p {
   color: #bbb;
+}
+main .contents7 .conainer .grid .gridtx:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  transition: all;
+  transition: 0.5s;
+}
+
+/******contents8********/
+main .contents8 {
+  position: absolute;
+  top: 6600px;
+  padding: 108px;
+  width: 100%;
+  color: var(--bs-body-color);
+}
+main .contents8 .h3 h3 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+}
+main .contents8 .h3 p {
+  line-height: 1.8;
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
 }
