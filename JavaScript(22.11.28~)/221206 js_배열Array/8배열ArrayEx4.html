@@ -1,0 +1,20 @@
+<script>
+  // 배열 안에 들어있는 숫자 중 3보다 큰 숫자로만 이루어진 배열을 새로 만들어서 반환
+
+  const total = (arr) => {
+    // 빈배열 생성 후 조건에 맞는 값만 추가
+    const newArr = [];
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i] > 3) {
+        newArr.push(arr[i]);
+      }
+    }
+    return newArr;
+  };
+
+  const arr = [1, 2, 3, 4, 5, 6, 7];
+  console.log(total(arr)); // [ 4, 5, 6, 7]
+  // console.log(delete arr[2]);
+  // console.log(arr.length);
+  // console.log(arr.splice(2));
+</script>

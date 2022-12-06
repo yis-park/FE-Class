@@ -1,0 +1,75 @@
+<script>
+  // 현재 년,월,일,요일, 시간: 분: 초: am&pm:
+  // 24시간제x -> 12시간제
+  // 1초에 한번씩 실행
+
+  // setTimeout(콜백함수, 시간);
+  // setTimeout(function () {}, 시간);
+  // setInterval(콜백함수, 시간);
+  // setInterval(callbackFn, 시간);
+
+  //https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array 참고사이트
+  //같이 한거
+  // (function(){})();즉시실행함수
+  (function time() {
+    const now = new Date();
+    let day = ["일", "월", "화", "수", "목", "금", "토", "일"];
+    day = day[now.getDay()];
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const date = now.getDate();
+    let hour = now.getHours();
+    let min = now.getMinutes();
+    let sec = now.getSeconds();
+    /*
+      if(hour>=12) {
+        ampm ='PM'
+      } else {
+        ampm ='AM'
+      }
+    */
+    const ampm = hour >= 12 ? "PM" : "AM";
+    hour %= 12;
+    // 단락평가
+    hour = hour || 12; //hour의 값이 0인 경우 false로 인식하기 때문에 뒤의 내용이 출력
+
+    // 10미만인 경우 2자리로 변경
+    hour = hour < 10 ? "0" + hour : hour;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
+
+    const output = `${year}년 ${month}월 ${date}일 ${day}요일 ${ampm} ${hour} : ${min} : ${sec}`;
+
+    console.log(output);
+    // setTimeout(time, 1000); 1초단위로 새로고침ㄹ
+  })();
+  // time();
+  // setInterval(time, 1000);
+
+  /* 내가한거
+   const now = new Date();
+   console.log(new Date());
+
+
+   const year = new Date().getFullYear();
+   console.log(`${year}년`);
+
+   const month = now.getMonth() + 1;
+   console.log(`${month}월`);
+
+   const date = now.getDate();
+   console.log(`${date}일`);
+
+   const day = ["일", "월", "화", "수", "목", "금", "토", "일"];
+   console.log(`${day[now.getDay()]}요일`);
+
+   const hours = now.getHours() - 12;
+   console.log(`${hours}시`);
+
+   const min = now.getMinutes();
+   console.log(`${min}분`);
+
+   const sec = now.getSeconds();
+   console.log(`${sec}초`);
+   */
+</script>
