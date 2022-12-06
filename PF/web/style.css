@@ -493,3 +493,124 @@ main .contents5 .flex_list .flex p {
   font-size: 18px;
   font-weight: 400;
 }
+
+/******contents6********/
+main .contents6 {
+  position: absolute;
+  top: 4550px;
+  width: 100%;
+  padding: 72px;
+  height: 700px;
+  color: #eee;
+}
+main .contents6 .h3 h3 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 48px;
+  padding: 0 12px;
+  color: var(--bs-body-color);
+}
+main .contents6 .container {
+  display: flex;
+  height: 400px;
+  padding: 0 12px;
+}
+main .contents6 .container h3 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 400px;
+  margin: 0 0 18px 0;
+}
+main .contents6 .container .flex_fr {
+  background: url(./images/01.jpg) no-repeat 50% / cover;
+  width: 100%;
+  border-radius: 30px;
+  margin: 10px;
+}
+main .contents6 .container .flex_se {
+  background: url(./images/02.jpg) no-repeat 50% / cover;
+  width: 100%;
+  border-radius: 30px;
+  margin: 10px;
+}
+main .contents6 .container .flex_th {
+  background: url(./images/03.jpg) no-repeat 50% / cover;
+  width: 100%;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+/******contents7********/
+main .contents7 {
+  position: absolute;
+  top: 5300px;
+  height: 1200px;
+  color: var(--bs-body-color);
+  width: 100%;
+  padding: 108px;
+  background-color: rgb(248, 249, 250);
+}
+main .contents7 div h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+main .contents7 .txt p {
+  line-height: 1.8;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+main .contents7 .conainer .grid {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 30px;
+  padding: 3rem;
+}
+main .contents7 .conainer .grid .gridtx {
+  padding: 48px;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: left;
+}
+main .contents7 .conainer .grid .grid_fr {
+  grid-row: 1/3;
+  background-color: var(--themecolor);
+  color: #fff;
+}
+main .contents7 .conainer .grid .gridtx .icon {
+  padding: 0 0 0.5rem;
+  margin-bottom: 1.5rem;
+}
+main .contents7 .conainer .grid .gridtx .icon span {
+  font-size: 2em;
+}
+main .contents7 .conainer .grid .gridtx .p p {
+  color: #777;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+main .contents7 .conainer .grid .gridtx .h4 h4 {
+  margin-bottom: 1.5rem;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 18px 0;
+}
+
+main .contents7 .conainer .grid .gridtx .flex_ul li {
+  display: flex;
+  align-items: center;
+  margin: 0 0 8px;
+  padding: 0;
+}
+main .contents7 .conainer .grid .grid_ei {
+  background-color: var(--bs-body-color);
+  color: #eee;
+}
+main .contents7 .conainer .grid .grid_ei p {
+  color: #bbb;
+}
