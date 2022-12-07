@@ -1,0 +1,33 @@
+<script>
+  const data = [
+    { id: 1, coffee: "아메리카노", size: "venti" },
+    { id: 2, coffee: "카페라떼", size: "venti" },
+    { id: 3, coffee: "바닐라라떼", size: "venti" },
+    { id: 4, coffee: "카페모카", size: "venti" },
+    { id: 5, coffee: "에스프레소", size: "none" },
+  ];
+
+  const data1 = data.concat({ id: 6, coffee: "토피넛라떼" });
+  const data2 = data.concat({ id: 7, coffee: "플레인요거트" });
+  console.log(data1);
+  console.log(data2);
+
+  const data3 = data.map((item) => {
+    if (item.id === 1) {
+      return {
+        ...item,
+        coffee: "아이스 아메리카노",
+      };
+    } else {
+      return item;
+    }
+  });
+  console.log("data3", data3);
+
+  console.log("----");
+  // 조건 ? 참 : 거짓;
+  const data4 = data.map((item) =>
+    item.id === 2 ? { ...item, coffee: "아이스 라떼" } : item
+  );
+  console.log(data4);
+</script>
