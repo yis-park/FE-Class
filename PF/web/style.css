@@ -41,7 +41,6 @@ li {
   text-transform: uppercase;
 }
 .container header .gnb {
-  text-transform: uppercase;
   height: 80px;
   line-height: 80px;
   display: flex;
@@ -52,7 +51,7 @@ li {
   display: flex;
   flex: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   color: #eee;
@@ -60,6 +59,7 @@ li {
   padding: 0 10px;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 999;
+  /* margin-right: auto; */
 }
 .container header .logo {
   width: 180px;
@@ -81,17 +81,28 @@ li {
   font-size: 1.1em;
   width: 120px;
 }
-.container header .gnb .log {
-  font-weight: 300;
-  width: 500px;
+.container header .gnb_log {
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container header .gnb_log .log {
+  /* text-align: right; */
+}
+.container header .gnb_log > li {
+  font-weight: 600;
   font-size: 1.1em;
-  display: block;
-  text-align: right;
+  width: 100px;
 }
 .gnb > li > ul {
   display: none;
 }
 .gnb > li:hover {
+  background-color: var(--themecolor);
+}
+.gnb_log > li:hover {
   background-color: var(--themecolor);
 }
 .gnb > li:hover > ul {
@@ -215,8 +226,9 @@ main .contents2 {
   position: absolute;
   top: 1000px;
   width: 100%;
-  height: 1000px;
+  height: 1050px;
   padding: 108px;
+  background-color: rgb(248, 249, 250);
 }
 main .contents2 .grid {
   display: grid;
@@ -310,7 +322,7 @@ main .contents2 .grid .flex:hover .txt2 {
 /******contents3********/
 main .contents3 {
   position: absolute;
-  top: 2000px;
+  top: 2050px;
   width: 100%;
   height: 1000px;
   padding: 108px;
@@ -374,7 +386,7 @@ main .contents3 .video a span:hover {
 /******contents4********/
 main .contents4 {
   position: absolute;
-  top: 3000px;
+  top: 3050px;
   width: 100%;
   padding: 0 108px 108px 108px;
 }
@@ -444,8 +456,6 @@ main .flex_tab .flex_tab_center {
   transition: 0.5s;
   transition: all;
   transform: translateY(45px);
-}
-main .flex_tab img {
 }
 main .flex_tab .flex_tab_left {
   width: 25%;
@@ -646,4 +656,75 @@ main .contents8 .h3 p {
   font-size: 1.25rem;
   margin-bottom: 3rem;
   font-weight: 300;
+}
+main .contents8 .container_adress {
+  margin-top: 3rem;
+}
+main .contents8 .container_adress .adress {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .contents8 .container_adress .adress .aeress_aro {
+  width: 25%;
+}
+main .contents8 .container_adress .adress .aeress_aro .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .contents8 .container_adress .adress .aeress_aro .list .icon span {
+  font-size: 2.5rem;
+  padding: 0 0.5rem;
+}
+main .contents8 .container_adress .adress .aeress_aro .list .h5 {
+  width: 70%;
+  padding: 0 0 0 20px;
+}
+main .contents8 .container_adress .adress .aeress_aro .list .h5 h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+}
+main .contents8 .container_adress .adress .aeress_aro .list p {
+  color: #777;
+  line-height: 1.8;
+  font-weight: 400;
+}
+main .contents8 .container_adress .adress .aeress_aro .h5 {
+  text-align: left;
+  padding: 0 0.5rem;
+}
+/******footer********/
+footer {
+  background-color: #fff;
+
+  padding: 40px 80px;
+  line-height: 1.8;
+  top: 7500px;
+  position: absolute;
+  width: 100%;
+  background-color: #282828;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #ffffff66;
+  font-weight: 400;
+}
+
+footer .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .material-symbols-rounded {
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  bottom: 170px;
+  right: 30px;
+  font-size: 3em;
+  color: var(--bs-body-color);
+}
+footer .material-symbols-rounded:hover {
+  color: var(--themecolor);
 }
