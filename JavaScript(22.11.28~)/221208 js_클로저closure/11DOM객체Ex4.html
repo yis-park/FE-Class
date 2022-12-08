@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DOM 객체 Ex4</title>
+    <style></style>
+  </head>
+  <body>
+    <h2>DOM 연습</h2>
+    <ul class="container">
+      <li>리스트1</li>
+      <li>리스트2</li>
+    </ul>
+    <script>
+      //  2초 후 container 뒤로 h2 이동
+      const h2 = document.querySelector("h2");
+      const container = document.querySelector(".container");
+
+      setTimeout(move, 2000);
+
+      function move() {
+        document.body.append(h2);
+        // container.append(h2); 이렇게 하게되면 ul의 자식으로 들어가게 됨.. 출제오류
+        container.insertAdjacentElement("afterend", h2);
+      }
+    </script>
+  </body>
+</html>

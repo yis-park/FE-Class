@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DOM 객체 Ex1</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>DOM 객체 Ex1</h1>
+    <ul id="gnb">
+      <li class="list"><a href="#"></a></li>
+      <li class="list"><a href="#"></a></li>
+      <li class="list"><a href="#"></a></li>
+      <li class="list"><a href="#"></a></li>
+      <li class="list"><a href="#"></a></li>
+    </ul>
+    <script>
+      // ul: 리스트 스타일 x
+      // li: linehigth 1.6
+      // a: 밑줄x, 글자색. 리스트 1,2, .. 리스트5 출력
+      /*내가한거
+      const ul = document.querySelector("#gnb");
+      const list = document.querySelectorAll("li");
+      gnb.style.listStyle = "none";
+      console.log(list);
+
+      list.forEach((li, idx) => {
+        li.textContent = `list ${idx + 1}`;
+        li.style.lineHeight = 1.6;
+        li.style.color = "tomato";
+        li.style.textDecoration = "none";
+      }); */
+      const ul = document.querySelector("#gnb");
+      const lists = document.querySelectorAll(".list");
+      const gnbA = document.querySelectorAll("#gnbA");
+
+      gnb.style.listStyle = "none";
+      lists.forEach((li) => (li.style.lineheight = 1.6));
+      gnbA.forEach((a, idx) => {
+        a.textContent = `list ${idx + 1}`;
+        a.style.lineHeight = 1.6;
+        a.style.color = "tomato";
+        a.style.textDecoration = "none";
+      });
+    </script>
+  </body>
+</html>

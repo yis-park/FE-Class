@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DOM 객체 Ex2</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <img alt="pic1" class="pic" />
+      <img alt="pic2" class="pic" />
+      <img alt="pic3" class="pic" />
+      <img alt="pic4" class="pic" />
+    </div>
+    <script>
+      /* https://via.placeholder.com/200/f09/000?txt=img1
+      https://via.placeholder.com/200/f20/000?txt=img2
+      https://via.placeholder.com/200/f60/000?txt=img3
+      https://via.placeholder.com/200/f85/000?txt=img4 */
+
+      const pic = document.querySelectorAll(".pic");
+
+      pic.forEach((pic, idx) => {
+        let ran = Math.trunc(Math.random() * 10);
+        const url = `https://via.placeholder.com/200/f${ran}9/000?txt=img${
+          idx + 1
+        }`;
+        // pic.setAttribute("src", url);
+        pic.src = url; // html 표준 정의 속성. 프로퍼터(속성) 동기화. 없으면 추가하고 있으면 변경하겠다.
+      });
+
+      /* const container = document.querySelector(".container");
+      const pic = document.querySelectorAll(".pic");
+      const img = document.querySelectorAll("img");
+      document.body.append(img);
+      pic.setAttribute(
+        "src",
+        "https://via.placeholder.com/200/f09/000?txt=img1"
+      );
+      pic.setAttribute(
+        "src",
+        "https://via.placeholder.com/200/f09/000?txt=img1"
+      ); */
+    </script>
+  </body>
+</html>

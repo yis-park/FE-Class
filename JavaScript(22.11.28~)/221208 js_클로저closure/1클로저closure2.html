@@ -1,0 +1,23 @@
+<script>
+  // closure 2
+
+  function Counter(count) {
+    let getCount = count; // 지역 변수. 외부에서는 이 변수에 직접 접근할 수 없기 때문에 스코프안에 정의한 두 클로저를 이용
+    return {
+      //객체 반환
+      num1: function () {
+        //클로저
+        getCount++; //5(6)
+        return getCount; //6
+      },
+      num2: function () {
+        //클로저
+        return getCount; //6
+      },
+    };
+  }
+
+  const fn = Counter(5);
+  console.log(fn.num1());
+  console.log(fn.num2());
+</script>

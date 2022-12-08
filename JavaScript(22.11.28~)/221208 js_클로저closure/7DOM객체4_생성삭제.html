@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DOM 객체4 _ 생성, 삭제</title>
+    <style></style>
+  </head>
+  <body>
+    <h3>생성과 삭제</h3>
+
+    <script>
+      // const body = document.querySelector('body'); 할 순 있지만 잘 쓰이지 않음
+      // .createElement(); 요소 이름을 인자로 전달해 생성만 해 줌
+      const ul = document.createElement("ul");
+      console.log(ul); // 만들어져는 있는데 html에 보여지진 않음
+
+      // .append(node); 노드 자식의 끝에 추가한다
+      document.body.append(ul); // body의 자식으로 추가하겠다
+      ul.setAttribute("id", "gnb");
+
+      // li 생성
+      const li = document.createElement("li");
+
+      // appendChild(node); 인자로 전달한 노드를 마지막 자식 요소로 DOM tree에 추가한다. ul>li 만들기
+      ul.appendChild(li);
+
+      li.innerHTML = `<a href="#">a 추가</a>`;
+
+      /* 
+        insertAdjacentHTML('위치값','노드');
+        -- beforebegin --
+        <ul>
+        -- afterbegin --
+        'text'
+        -- beforeend --
+        </ul>
+        -- afterend --
+      
+      */
+      ul.insertAdjacentHTML("beforeend", "<li>li 노드 추가</li>");
+
+      const h1 = document.createElement("h1");
+      // .prepend(노드); 기준 노드 자식의 맨 앞에 추가
+      document.body.prepend(h1);
+      h1.textContent = "노드추가, 수정, 삭제";
+
+      // .before('문자열'); 기준 노드 형제 앞쪽에 추가
+      ul.before("</p>.before</p>"); // 글자 추가 .before
+
+      // .after('문자열'); 기준 노드 형제 뒤쪽에 추가
+      const p = document.createElement("p");
+      p.textContent = "p요소를 뒤에 추가";
+      ul.after(p);
+
+      // .remove(); 노드 삭제. 매개변수 x
+      // ul.remove(); // ul 삭제
+      const lis = document.querySelectorAll("li");
+      // lis.forEach((li) => li.remove()); // li 삭제
+    </script>
+  </body>
+</html>
