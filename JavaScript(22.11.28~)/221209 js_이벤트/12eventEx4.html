@@ -11,9 +11,10 @@
         width: 50%;
         height: 50%;
         font-size: 2em;
+        /* display: none; */
       }
-      .menu::before,
-      .menu::after {
+      .after::before,
+      .after::after {
         content: "";
         background-color: #000;
         position: absolute;
@@ -23,31 +24,35 @@
         left: 50px;
         transform: translate(-50%, -50%) rotate(45deg); /* 이동 
         시켜주는 갑*/
-        display: none;
       }
-      .menu::after {
+      .after::after {
         transform: translate(-50%, -50%) rotate(-45deg);
       }
-      .menu.active {
+      /*   .after:active .menu {
         display: block;
-      }
+      } */
     </style>
   </head>
   <body>
-    <div class="menu">
-      <ul>
-        <li>menu1</li>
-        <li>menu2</li>
-        <li>menu3</li>
-        <li>menu4</li>
-      </ul>
+    <div class="after">
+      <div class="menu">
+        <ul>
+          <li>menu1</li>
+          <li>menu2</li>
+          <li>menu3</li>
+          <li>menu4</li>
+        </ul>
+      </div>
     </div>
 
     <script>
       const munu = document.querySelector(".menu");
-      const before = document.querySelector(".memu::before");
+      const after = document.querySelector(".after");
+      const before = document.querySelector(".after::before");
 
-      menu;
+      after.addEventListener("click", () => {
+        document.body.menu.display = "none";
+      });
     </script>
   </body>
 </html>

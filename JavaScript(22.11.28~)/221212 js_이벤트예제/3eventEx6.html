@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>eventEx6</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        height: 200vh;
+        background-color: #ddd;
+        font-weight: bold;
+        font-size: 3em;
+      }
+      nav {
+        width: 200px;
+        height: 200vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      nav #btn {
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        width: 50px;
+        height: 130px;
+        background-color: pink;
+        writing-mode: vertical-rl;
+        font-weight: bold;
+        font-size: 2em;
+        color: indianred;
+        text-decoration: none;
+        vertical-align: top;
+        padding: 20px 0;
+        transition: 0.4s;
+      }
+      nav #gnb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        padding: 50px 20px;
+        color: indianred;
+        font-weight: 1.5em;
+        font-weight: bold;
+        background-color: #333;
+        transition: 0.4s;
+        color: #fff;
+        list-style: none;
+        /* display: none; */
+      }
+      #btn:hover {
+        left: 200px;
+      }
+      #btn:hover #gnb {
+        display: block;
+        width: 200px;
+      }
+
+      nav #gnb > li {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>main</main>
+
+    <nav>
+      <a href="#" id="btn">close</a>
+      <ul id="gnb">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+      </ul>
+    </nav>
+
+    <script>
+      const gnb = document.querySelector("#gnb");
+      const btn = document.querySelector("#btn");
+      const nav = document.querySelector("nav");
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        nav.classList.toggle("click");
+      });
+    </script>
+  </body>
+</html>

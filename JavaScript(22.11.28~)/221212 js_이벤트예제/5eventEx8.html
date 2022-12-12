@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>eventEx8</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <style>
+      .box {
+        width: 500px;
+        height: 300px;
+        border: 1px solid #000;
+        margin: 80px auto;
+        position: relative;
+      }
+      img {
+        /* display: none; */
+      }
+      .box .material-symbols-rounded {
+        position: absolute;
+        width: 45px;
+        height: 40px;
+        font-size: 3em;
+        line-height: 40px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+      .box .right {
+        top: 120px;
+        left: 0;
+      }
+      .box .left {
+        top: 120px;
+        right: 0;
+      }
+      .box .material-symbols-rounded:hover {
+        transform: scale(1.1);
+      }
+      span.active img {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <span class="material-symbols-rounded right active"> switch_right </span>
+      <span class="material-symbols-rounded left active"> switch_left </span>
+      <img src="https://via.placeholder.com/500x300/ff0000/?text=1mg" alt="" />
+      <img src="https://via.placeholder.com/500x300/ff2245?text=2img" alt="" />
+      <img src="https://via.placeholder.com/500x300/008000?text=3img" alt="" />
+      <img src="https://via.placeholder.com/500x300/333333?text=4img" alt="" />
+      <img src="https://via.placeholder.com/500x300/?text=5img" alt="" />
+    </div>
+    <script>
+      // 인덱스 번호는 1씩 증감 for문 사용하기
+      const img = document.querySelectorAll("img");
+      const box = document.querySelector(".box");
+      const btn = document.querySelectorAll(".material-symbols-rounded");
+      for (let i = 0; i <= img.lengh; i++) {
+        console.log(img[i]);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>eventEx5</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        /* width: 90%; */
+        height: 150vh;
+        background-color: lightskyblue;
+        position: relative;
+        /* float: left; */
+        font-size: 4em;
+        font-weight: bold;
+      }
+      .menu {
+        width: 10%;
+        height: 150vh;
+        background-color: lightpink;
+        position: absolute;
+        top: 0;
+        /* float: left; */
+        left: 90vw;
+      }
+      #btn span {
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+        color: #fff;
+        position: relative;
+        top: 50px;
+        right: 0;
+        transition: 0.6s;
+        opacity: 0.7;
+      }
+
+      #btn:hover span {
+        opacity: 1;
+      }
+
+      #gnb {
+        background-color: #1a532b;
+        color: #fff;
+        width: 200px;
+        height: 0;
+        transition: 0.4s;
+        margin: 80px 0 0;
+        overflow: hidden;
+      }
+      #gnb.active {
+        height: 200px;
+      }
+      .menu.active {
+        width: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">main</div>
+    <div class="menu">
+      <a href="#" id="btn"
+        ><span class="material-symbols-rounded"> menu </span></a
+      >
+      <ul id="gnb">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+      </ul>
+    </div>
+    <script>
+      const menu = document.querySelector(".menu");
+      const span = document.querySelector("span");
+      const gnb = document.querySelector("#gnb");
+      const btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", () => {
+        gnb.classList.toggle("active");
+        btn.classList.toggle("active");
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
