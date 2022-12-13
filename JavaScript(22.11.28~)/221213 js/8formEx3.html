@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>formEx3</title>
+    <style>
+      body {
+        height: 100vh;
+        background-image: linear-gradient(
+          45deg,
+          rgb(39, 23, 66),
+          rgb(240, 207, 207)
+        );
+        color: #fff;
+      }
+      #shopping {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 20px;
+      }
+
+      #saveList li {
+        margin: 20px 0;
+      }
+
+      #saveList li span {
+        background-color: #fff;
+        color: #000;
+        padding: 5px 10px;
+        margin-left: 50px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>쇼핑리스트</h1>
+      <form id="shopping">
+        <label for="">
+          제품명: <input type="text" name="list" id="productName" />
+        </label>
+        <button type="submit">저장</button>
+        <button type="reset">취소</button>
+      </form>
+      <ol id="saveList"></ol>
+    </div>
+    <script src="https://app.embed.im/snow.js"></script>
+    <script>
+      const productName = document.querySelector("#productName");
+      const save = document.querySelector("[type=submit]");
+      const lists = document.querySelector("#saveList");
+
+      save.addEventListener("click", (e) => {
+        e.preventDefault();
+        // 리스트 추가
+        if (productName.value) {
+          lists.innerHTML += `<li><strong>${productName.value}</strong><span>삭제</span></li>`;
+        } else {
+          alert("내용을 입력하세요.");
+        }
+
+        // 텍스트 필드에 빈 문자열로 대입
+        productName.value = "";
+
+        // 리스트 제거
+        const delBtn = document.querySelectorAll("#saveList li span");
+        delBtn.forEach((del) => {
+          del.addEventListener("click", removeItem);
+        });
+      });
+
+      function removeItem(e) {
+        // console.log("del");
+        const item = e.target.parentNode; // 내가 클릭한 요소의 상위 노드 탐색
+        item.remove();
+      }
+    </script>
+  </body>
+</html>

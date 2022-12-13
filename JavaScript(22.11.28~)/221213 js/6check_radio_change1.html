@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>checkbox +radio 이벤트 'change'</title>
+    <style></style>
+  </head>
+  <body>
+    <input type="checkbox" name="ckeck"  id="check1"  value="체크박스1"/>체크박스1
+    <input type="checkbox" name="ckeck" id="check2" value="체크박스2" />체크박스2
+    <input  type="checkbox" name="ckeck" id="check3"  value="체크박스3"  />체크박스3
+    <h3></h3>
+    <script>
+      // 'change': 이벤트명 addEvent~()에서 사용. 폼 요소 상태 변경이 끝날 때. input, button, select
+      const h3 = document.querySelector("h3");
+      const checks = document.querySelectorAll("[type=checkbox]");
+
+      // check[0].addEventListener();
+      checks.forEach(check=> {
+        check.addEventListener('change',e=>{
+          const target = e.target.checked;
+          h3.textContent= `체크 박스가 ${target}로 변경되었습니다.`;
+        } )
+      });
+
+      /* h3.textContent= `체크 박스가 ${}로 변경되었습니다.` */
+    </script>
+  </body>
+</html>

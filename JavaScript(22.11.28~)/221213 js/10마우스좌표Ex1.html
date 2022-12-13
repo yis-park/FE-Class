@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>마우스좌표Ex1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        height: 60vh;
+        background-color: pink;
+        overflow: hidden;
+      }
+      .santa {
+        position: absolute;
+        font-size: 6em;
+        cursor: pointer;
+        top: 10px;
+        left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="santa">🎅</div>
+    </div>
+    <script>
+      // 마우스를 누르면(mousedown) 움직이고(mousemove) 마우스를 떼면(mouseup) 멈춤(리스너 제거)
+      // mousedown <-> mouseup
+
+      const santa = document.querySelector(".santa");
+      const container = document.querySelector(".container");
+
+      const onMove = (e) => {
+        // santa.style.left = `${e.clientX - 60}px`;
+        // santa.style.top = `${e.clientY - 55}px`;
+
+        //  translate(x,y);
+        santa.style.transform = `translate(${e.clientX - 60}px, ${
+          e.clientY - 55
+        }px)`;
+      };
+
+      addEventListener("mousedown", () => {
+        addEventListener("mousemove", onMove);
+        addEventListener("mousemup", () => {
+          removeEventListener("mousemove", onMove);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -21,13 +21,13 @@
   background-image: url(https://via.placeholder.com/1920x500/27bc0/ddd?text=img1);
 }
 #simpleSlide #slideWrapper #img2 {
-  background-image: url(https://via.placeholder.com/1920x500/ffb200?text=img1);
+  background-image: url(https://via.placeholder.com/1920x500/ffb200?text=img2);
 }
 #simpleSlide #slideWrapper #img3 {
-  background-image: url(https://via.placeholder.com/1920x500/3ab4f2/ddd?text=img1);
+  background-image: url(https://via.placeholder.com/1920x500/3ab4f2/ddd?text=img3);
 }
 #simpleSlide #slideWrapper #img4 {
-  background-image: url(https://via.placeholder.com/1920x500/5800ff/fff?text=img1);
+  background-image: url(https://via.placeholder.com/1920x500/5800ff/fff?text=img4);
 }
 #simpleSlide #slideWrapper .slideItem.active {
   opacity: 1;

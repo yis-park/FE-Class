@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>formEx1</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>제곱미터를 평으로</h1>
+    <h2>*0.3025</h2>
+    <form name="transform">
+      <input type="text" name="num" id="num" />
+      <button type="submit">계산</button>
+      <p>변환 값</p>
+    </form>
+
+    <script>
+      const form = document.forms.transform;
+      const p = document.querySelector("p");
+      const text = document.querySelector("input");
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let num = text.value;
+        console.log(typeof num); //string. input으로 입력받은 값은 문자열로 반환
+        num = Number(num);
+        console.log(typeof num); //number
+
+        // .isNaN() 숫자인지 아닌지 판단해주는 메서드 boolean반환. NaN:숫자 아니다 ->true반환
+        if (isNaN(num)) {
+          p.textContent = "숫자로 입력하세요";
+          return;
+        }
+        const sum = Math.round(num * 0.3025); // 반올림
+
+        p.textContent = `약 ${sum}평 입니다.`;
+      });
+    </script>
+  </body>
+</html>
