@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>마우스좌표Ex2</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .bg {
+        position: absolute;
+        background: url(./images/bg2.png) 50% / cover;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .quinoa {
+        position: absolute;
+        transition: 0.3s;
+      }
+      .quinoa:hover {
+        transform: rotate(20deg);
+      }
+      .left {
+        position: absolute;
+        transition: 0.3s;
+        right: 50px;
+      }
+      .left:hover {
+        transform: rotate(20deg);
+      }
+      .right {
+        position: absolute;
+        transition: 0.3s;
+        bottom: 50px;
+        right: 50px;
+      }
+      .right:hover {
+        transform: rotate(20deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="bg"></h2>
+    <img src="./images/quinoa.png" alt="" class="quinoa" />
+    <img src="./images/speculoos-left.png" alt="" class="left" />
+    <img src="./images/speculoos-right.png" alt="" class="right" />
+
+    <script>
+      const quinoa = document.querySelector(".quinoa");
+      const left = document.querySelector(".left");
+      const right = document.querySelector(".right");
+
+      quinoa.addEventListener("click", () => quinoa.classList.toggle("active"));
+      left.addEventListener("click", () => left.classList.toggle("active"));
+      right.addEventListener("click", () => right.classList.toggle("active"));
+      // btn.addEventListener("click", () => gnb.classList.toggle("active"));
+    </script>
+  </body>
+</html>

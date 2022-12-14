@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>마우스좌표Ex3</title>
+    <style>
+      body {
+        margin: 0;
+        text-align: center;
+      }
+      .container {
+        background-color: rgb(255, 219, 18);
+        height: 100vh;
+        position: relative;
+      }
+      .container h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 15em;
+        font-weight: bold;
+        color: #fff;
+        position: absolute;
+        top: 25%;
+        left: 45%;
+      }
+      .container h1:hover {
+        filter: blur(4px);
+      }
+      .container p {
+        font-size: 2em;
+        position: absolute;
+        top: 38%;
+        left: 20%;
+        letter-spacing: 2em;
+      }
+      .container p:hover {
+        filter: blur(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JS</h1>
+      <p>It's too hard</p>
+    </div>
+    <script>
+      const h1 = document.querySelector("h1");
+      const p = document.querySelector("p");
+
+      addEventListener("mousemove", (e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+        // console.log(x, y);
+        h1.style.transform = `translate(${x / 60}px, ${y / 50}px)`;
+        p.style.transform = `translate(${x / -60}px, ${y / 70 + 10}px)`;
+        p.style.letterSpacing = `(${x / -60}px, ${y / 70 + 10}px)`;
+      });
+    </script>
+  </body>
+</html>

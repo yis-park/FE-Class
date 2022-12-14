@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>마우스좌표Ex2</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+      .container {
+        height: 100vh;
+        overflow: hidden;
+        background: url(./images/bg2.png) no-repeat 50% / 45%,
+          linear-gradient(#00394f, #00384d);
+        position: relative;
+      }
+      img {
+        position: absolute;
+      }
+      .quinoa {
+        top: 20px;
+        left: 20px;
+      }
+      .left {
+        top: 20px;
+        right: 20px;
+      }
+      .right {
+        bottom: 50px;
+        right: 20px;
+        transform: tran;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="./images/quinoa.png" alt="" class="quinoa" />
+      <img src="./images/speculoos-left.png" alt="" class="left" />
+      <img src="./images/speculoos-right.png" alt="" class="right" />
+    </div>
+
+    <script>
+      const quinoa = document.querySelector(".quinoa");
+      const left = document.querySelector(".left");
+      const right = document.querySelector(".right");
+
+      addEventListener("mousemove", (e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+        // console.log(x, y);
+        quinoa.style.transform = `translate(${x / 60}px, ${y / 50}px)`;
+        left.style.transform = `translate(${x / -60}px, ${y / 70 + 10}px)`;
+        right.style.transform = `translate(${30 - x / 50}px, ${40 - y / 50}px)`;
+      });
+    </script>
+  </body>
+</html>
