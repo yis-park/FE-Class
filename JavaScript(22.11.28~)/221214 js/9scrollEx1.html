@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>scrollEx1</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        height: 300vh;
+      }
+      .container {
+        font-size: 3em;
+      }
+      h2 {
+        background: url(./images/pooh.png) 50% / cover;
+        height: 70px;
+        width: 100px;
+        position: fixed;
+        bottom: 150px;
+        right: 70px;
+      }
+      h2.active {
+        /* display: inline-block; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      main
+      <h2></h2>
+    </div>
+    <script>
+      const container = document.querySelector(".container");
+      const h2 = document.querySelector("h2");
+
+      addEventListener("scroll", () => {
+        let num = h2.offsetTop - 100;
+        console.log(num);
+        if (scrollY > num) {
+          container.classList.add("active");
+        } else if (scrollY <= 300) {
+          container.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

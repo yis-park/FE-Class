@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>scrollEx1</title>
+    <style>
+      .box {
+        height: 300vh;
+      }
+      .btn {
+        position: fixed;
+        right: 50px;
+        bottom: 80px;
+        font-size: 3em;
+        transition: 0.4s;
+        animation: dolphin infinite 4s;
+        opacity: 0;
+      }
+
+      @keyframes dolphin {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-10deg);
+        }
+
+        50% {
+          transform: translateY(-20px) rotate(10deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>top</h1>
+    </div>
+    <a href="#" id="go_to" class="btn">🐳</a>
+    <script>
+      const goTo = document.querySelector("#go_to");
+
+      goTo.addEventListener("click", (e) => {
+        e.preventDefault();
+        scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      addEventListener("scroll", () => {
+        let ht = document.documentElement.scrollTop;
+        // ht > 300 ? (goTo.style.opacity = 1) : (goTo.style.opacity = 0);
+        scrollY > 300 ? (goTo.style.opacity = 1) : (goTo.style.opacity = 0);
+      });
+    </script>
+  </body>
+</html>
