@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>matchMedia</title>
+</head>
+<body>
+  
+  <script>
+  /* 
+    window.matchMedia(); 미디어쿼리 객체 반환
+    matchMedia( '(min-width:768px)' ); 
+    matchMedia( 'screen and (min-width:768px) and (max-width:1241px)' );
+    matchMedia( '(min-width:768px)' ).matches; 범위가 맞는 지 boolean으로 반환
+  */
+  /* 보통은 너무 길기때문에 변수로 대입하여 작성 */
+
+  const mq = matchMedia('(min-width:768px)');
+
+  const bgColor = (bg, txt) => { // bgColor를 호출하면 아래의 값이 실행되게끔
+    document.body.style.background = bg
+    document.body.innerHTML = `<h3>768px <em>${txt}</em> 화면입니다.</h3>`
+  }
+/*
+  if (mq.matches) { // matches를 통해 orange로 내보내느냐 lightskyblue로 내보내느냐 (새로고침하여 확인해야 한다)
+    // document.body.style.background = 'orange'
+    bgColor('orange') ;
+    document.body.innerHTML = `<h3>768px <em>이상의</em> 화면입니다.</h3>`
+  } else {
+    document.body.style.background = 'lightskyblue'
+    document.body.innerHTML = `<h3>768px <em>미만의</em> 화면입니다.</h3>`
+  }
+*/
+  mq.matches ? bgColor('orange','이상의') : bgColor('lightskyblue','미만의')
+  </script>
+</body>
+</html>
