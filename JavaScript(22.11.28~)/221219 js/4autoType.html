@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>auto Type</title>
+    <style>
+      body {
+        font-size: 2em;
+        font-weight: bold;
+      }
+      .btn {
+        cursor: pointer;
+        text-align: center;
+        border: 3px solid #000;
+        padding: 5px 10px;
+        width: 80px;
+      }
+      .btn:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn">start</div>
+    <h2></h2>
+    <script>
+      // const btn = document.querySelector(".btn");
+      const h2 = document.querySelector("h2");
+
+      const text = "자동으로 한글이 작성됩니다. 이렇게!";
+
+      let i = 0;
+      if (i < text.length) {
+        setInterval(h2);
+        break;
+      }
+      /*
+      btn.addEventListener("click", () => {
+        if (i < text.length) {
+          // .charAt(); 해당 인덱스 번호의 문자열 반환. 없으면 빈문자열 반환
+          h2.textContent += text[i]; // 한글자씩 보여짐. 없으면 undefiend
+          i++;
+        }
+      });
+      */
+    </script>
+  </body>
+</html>
