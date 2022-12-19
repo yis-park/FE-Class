@@ -32,10 +32,17 @@
       const text = "자동으로 한글이 작성됩니다. 이렇게!";
 
       let i = 0;
-      if (i < text.length) {
-        setInterval(h2);
-        break;
-      }
+      (function autoType() {
+        if (i < text.length) {
+          h2.textContent += text[i];
+          i++;
+        } else {
+          // 다 출력되면 리셋돼서 처음부터 시작함
+          h2.textContent = "";
+          i = 0;
+        }
+        setTimeout(autoType, 300); // 한번만 실행되지만 호출은 계속함
+      })();
       /*
       btn.addEventListener("click", () => {
         if (i < text.length) {
