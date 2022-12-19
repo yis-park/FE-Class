@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>switch선택문Ex4 다시보기</title>
+    <title>switch선택문Ex4</title>
     <style></style>
   </head>
   <body>
@@ -13,7 +13,7 @@
       // 아이디가 일치하지 않으면  아이디가 일치하지 않습니다 출력
 
       const defaultId = "web";
-      const defaultPw = "1234";
+      const defaultPw = 1234;
 
       let userId = prompt("아이디를 입력하세요.");
 
@@ -31,6 +31,7 @@
             default:
               alert("다시 시도해 주십시오.");
           }
+          break;
         default: //아이디가 거짓인 경우
           alert("아이디가 일치하지 않습니다.");
           break;
