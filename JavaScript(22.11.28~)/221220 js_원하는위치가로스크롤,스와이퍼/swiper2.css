@@ -1,0 +1,72 @@
+@charset "utf-8";
+body {
+  font-size: 1.2em;
+}
+
+/* swiper 크기 조절 */
+#mainSwiper {
+  width: 100%;
+  height: 80vh;
+  background-color: rgb(247, 181, 181);
+  text-transform: capitalize;
+  --swiper-theme-color: rgb(122, 151, 233);
+}
+
+/* 이미지 */
+#mainSwiper .swiper-wrapper li {
+  background: no-repeat 50% / cover;
+}
+#mainSwiper .swiper-wrapper #bg1 {
+  background-image: url(https://via.placeholder.com/1000x500/FFD4B2/000?text=pic1);
+}
+#mainSwiper .swiper-wrapper #bg2 {
+  background-image: url(https://via.placeholder.com/1000x500/FFF6BD/000?text=pic2);
+}
+#mainSwiper .swiper-wrapper #bg3 {
+  background-image: url(https://via.placeholder.com/1000x500/CEEDC7/000?text=pic3);
+}
+#mainSwiper .swiper-wrapper #bg4 {
+  background-image: url(https://via.placeholder.com/1000x500/86C8BC/000?text=pic4);
+}
+
+/* 텍스트 */
+#mainSwiper .swiper-wrapper .text_wrapper {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 400px;
+  height: 200px;
+  padding: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+#mainSwiper .swiper-wrapper .title {
+  font-size: 2em;
+  font-weight: bold;
+}
+#mainSwiper .swiper-wrapper h3 {
+  font-size: 1.5em;
+}
+#mainSwiper .swiper-wrapper .text {
+  line-height: 1.4;
+  max-width: 400px;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  color: #000;
+}
+
+/* 숫자 패이지네이션 */
+.swiper-pagination {
+  border: 3px solid #fff;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}

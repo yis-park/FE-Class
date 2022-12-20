@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>swiper2</title>
+    <!-- 1. reset -->
+    <link rel="stylesheet" href="../../common/minireset.min.css" />
+    <!-- 2. swiper css -->
+    <link rel="stylesheet" href="../../common/swiper-bundle.min.css" />
+    <!-- 내가 작업한 css -->
+    <link rel="stylesheet" href="swiper2.css" />
+
+    <!-- swiper js -->
+    <script src="../../common/swiper-bundle.min.js"></script>
+    <!-- 내가 작업한 js -->
+    <script defer src="swiper2.js"></script>
+  </head>
+  <body>
+    <!-- Swiper main container -->
+    <div class="swiper" id="mainSwiper">
+      <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+      <!-- 이미지 영역 -->
+      <ul class="swiper-wrapper">
+        <!-- 이미지 -->
+        <li class="swiper-slide" id="bg1">
+          <!-- data-swiper-parallax: '시간' -->
+          <section class="text_wrapper" data-swiper-parallax="-900">
+            <h2 class="title" data-swiper-parallax="-700">title1</h2>
+            <h3 data-swiper-parallax="-300">subtitle1</h3>
+            <div class="text">
+              <p>
+                같이, 청춘의 많이 물방아 사막이다. 사라지지 대중을 청춘은 없는
+                돋고, 지혜는 이것이다. 청춘에서만 그들은 그들의 피어나는
+                이것이다. 심장의 가장 그들은 오직 끓는 광야에서 뭇 있음으로써
+                것이다.
+              </p>
+            </div>
+          </section>
+        </li>
+        <li class="swiper-slide" id="bg2">
+          <section class="text_wrapper" data-swiper-parallax="-900">
+            <h2 class="title" data-swiper-parallax="-700">title2</h2>
+            <h3 data-swiper-parallax="-300">subtitle2</h3>
+          </section>
+        </li>
+        <li class="swiper-slide" id="bg3">
+          <section class="text_wrapper" data-swiper-parallax="-900">
+            <h2 class="title" data-swiper-parallax="-700">title3</h2>
+          </section>
+        </li>
+        <li class="swiper-slide" id="bg4">
+          <section class="text_wrapper" data-swiper-parallax="-900">
+            <h2 class="title" data-swiper-parallax="-700">title4</h2>
+            <h3 data-swiper-parallax="-300">subtitle4</h3>
+          </section>
+        </li>
+      </ul>
+      <!-- 추가 옵션 -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </body>
+</html>
