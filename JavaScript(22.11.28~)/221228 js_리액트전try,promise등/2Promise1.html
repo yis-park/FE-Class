@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Promise 1</title>
+    <style></style>
+  </head>
+  <body>
+    <h2>new Promise(resolve, reject)</h2>
+    <h3>resolve(); //성공시 불러 올 콜백함수</h3>
+    <h3>reject(); //실패시 불러 올 콜백함수</h3>
+
+    <script>
+      let boo = true;
+      // Promise 객체 생성
+      // new Promise(resolve, reject);
+      const coffee = new Promise((res, rej) => {
+        boo ? res("커피 주문") : rej("주문 실패");
+      });
+
+      /*
+       promis 객체 사용법 메서드채이닝방식(연결연결)   변수.then().catch(); catch()많이 생략됨
+      coffee.then((good) => console.log(good)).catch((bad) => console.log(bad));
+      */
+
+      coffee.then(
+        // 이행 fulfilled 상태
+        (order) => console.log(order),
+
+        // 거부 rejected 상태
+        (cancel) => console.log(cancel)
+      );
+    </script>
+  </body>
+</html>

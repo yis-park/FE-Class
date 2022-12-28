@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Promise 3 - callback</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      console.log("커피 주문");
+
+      const step1 = (item) => {
+        setTimeout(() => {
+          console.log("주문 접수");
+          item();
+        }, 2000);
+      };
+
+      const step2 = (item) => {
+        setTimeout(() => {
+          console.log("주문한 메뉴가 약 5분 이내 준비될 예정입니다.");
+          item();
+        }, 1000);
+      };
+
+      const step3 = (item) => {
+        setTimeout(() => {
+          console.log("열심히 제조 중입니다.");
+          item();
+        }, 2000);
+      };
+
+      step1(function () {
+        step2(function () {
+          step3(function () {
+            console.log("메뉴가 픽업대에 준비되어 있습니다.");
+          });
+        });
+      });
+      // step1의 함수범위가 어디까지인지 (가독성↓) 확인하기 어려움
+    </script>
+  </body>
+</html>

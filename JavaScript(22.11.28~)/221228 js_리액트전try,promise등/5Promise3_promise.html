@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Promise 4 - promise</title>
+    <style></style>
+  </head>
+  <body>
+    <ol>
+      <li>커피 주문</li>
+      <li>이행하면(fullfilled), 주문 접수</li>
+      <li>이행하면(fullfilled), 주문 준비</li>
+      <li>이행하면(fullfilled), 커피 제조</li>
+      <li>이행하면(fullfilled), 주문한 커피가 나왔습니다.</li>
+    </ol>
+    <script>
+      // promise 객체 생성
+      const coffee = () => {
+        return new Promise((res) => {
+          res("커피 주문");
+        });
+      };
+
+      const step1 = (txt) => {
+        console.log(txt);
+        return new Promise((res) => {
+          setTimeout(() => {
+            res("주문 접수");
+          }, 1000);
+        });
+      };
+
+      const step2 = (txt) => {
+        console.log(txt);
+        return new Promise((res) => {
+          setTimeout(() => {
+            res("주문한 메뉴가 약 5분 이내 준비될 예정입니다.");
+          }, 2000);
+        });
+      };
+
+      const step3 = (txt) => {
+        console.log(txt);
+        return new Promise((res) => {
+          setTimeout(() => {
+            res("열심히 제조 중입니다.");
+          }, 1000);
+        });
+      };
+
+      // promise 객체 사용. 가독성 면에서 콜백보다 훨씬 좋음.
+      /* 
+      coffee()
+        .then((result) => step1(result))
+        .then((result) => step2(result))
+        .then((result) => step3(result))
+        .then((result) => console.log(result))
+        .then(() => {
+          setTimeout(() => {
+            console.log("주문한 커피가 나왔습니다");
+          }, 3000);
+        }); 
+      */
+
+      // result 생략 가능
+      coffee()
+        .then(step1)
+        .then(step2)
+        .then(step3)
+        .then(console.log)
+        .then(() => {
+          setTimeout(() => {
+            console.log("주문한 커피가 나왔습니다");
+          }, 2000);
+        });
+    </script>
+  </body>
+</html>

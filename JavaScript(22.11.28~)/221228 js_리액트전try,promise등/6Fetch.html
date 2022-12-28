@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Fetch</title>
+    <style>
+      ul {
+        border-bottom: 3px solid #000;
+        /* list-style: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script>
+      const result = document.querySelector("#result");
+      /*  js 객체 작성방식
+      {
+       limit: 30,
+       skip: 0,
+       total: 100,
+       users: Array(30)
+       }
+       */
+
+      /*  
+        패치 사용법은 이게 다임
+       fetch('https://dummyjson.com/products/1')
+        .then(res => res.json())
+        .then(json => console.log(json))
+      */
+
+      // json 파일 읽음
+      fetch("https://dummyjson.com/users")
+        // json 파일을 객체로 변환(js와 방식이 다르기 때문에 js에서 활용할 수 있도록 식을 세워주는 것)
+        .then((res) => res.json())
+        // 출력
+        // .then((json) => console.log(json));
+        // .then((json) => console.log(json.users));
+        // .then((json) => console.log(json.users[0]));
+        .then((json) => {
+          let output = "";
+          json.users.forEach((user, idx) => {
+            console.log(user);
+            if (idx < 10) {
+              output += `
+              <h2>${user.firstName}</h2>
+              <ul>
+                <li><img src = ${user.image} alt=${user.lastname}></li>
+                <li>이메일: ${user.email}</li>
+                <li>연락처: ${user.phone}</li>
+                </ul>`;
+            }
+          });
+
+          result.innerHTML = output;
+        })
+        .catch((err) => console.log(err));
+    </script>
+  </body>
+</html>

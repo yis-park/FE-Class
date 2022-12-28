@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>try catch 문</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>try catch 문</h1>
+    <h2>10보다 작은 숫자를 입력하세요</h2>
+    <form id="form">
+      <input type="text" id="userNumber" />
+      <button type="submit">입력</button>
+    </form>
+    <h3 id="result"></h3>
+    <script>
+      const userNumber = document.querySelector("#userNumber");
+      const result = document.querySelector("#result");
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        let n = userNumber.value;
+        // console.log(n);
+
+        try {
+          // 실행 구문
+          if (n === "" || isNaN(n)) {
+            throw "숫자만 입력하세요"; // 예외 유형 처리
+          } else if (n <= 10) {
+            result.textContent = n;
+          } else if (n > 10) {
+            throw "10보다 적은 수를 입력하세요";
+          }
+        } catch (err) {
+          // 에러 발생시. throw 값을 매개변수로 받음
+          // alert(err);
+          console.log(err);
+          console.error(err); // 글자 전체를 빨갛게 보여줌
+        } finally {
+          // 관계 없이 항상 실행. 보통 생략
+          userNumber.value = "";
+        }
+      });
+
+      // 참고: catch 블록 안에서 오류를 기록할 땐 console.log()보다 console.error()를 사용하는 것을 추천합니다. console.error()는 출력 형식도 오류에 적합하고, 현재 페이지에서 발생한 오류의 목록도 업데이트합니다.
+    </script>
+  </body>
+</html>
