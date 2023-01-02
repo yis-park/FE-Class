@@ -1,0 +1,35 @@
+article {
+  /* border: 1px solid #000; */
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+table {
+  text-align: left;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  width: 21vw;
+}
+tbody tr th {
+  padding-bottom: 5px;
+  font-weight: "bold";
+}
+tbody tr td {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+button {
+  border: 1px solid #000;
+  border-radius: 30px;
+  height: 40px;
+  width: 130px;
+  background-color: #fff;
+  padding: 10px;
+}
