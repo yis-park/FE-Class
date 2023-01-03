@@ -1,0 +1,70 @@
+a {
+  text-decoration: none;
+  color: #333;
+}
+article {
+  max-width: 1600px;
+  width: 90vw;
+  margin: 50px auto;
+  margin: 0;
+  /* border: 1px solid #000; */
+}
+article h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+article h2 + p {
+  text-align: center;
+  margin: 20px;
+}
+article .business {
+  display: flex;
+  justify-content: space-between;
+  gap: 1%;
+}
+article .business .businessList {
+  width: 35%;
+  min-width: 220px;
+}
+article .business .businessList .businessimg {
+  overflow: hidden;
+  height: 26vw;
+  overflow: hidden;
+}
+article .business .businessList img {
+  width: 100%;
+  transition: 0.5s;
+}
+article .business .businessList .businessimg:hover img {
+  transform: scale(1.1);
+}
+article .business .businessList h3 {
+  padding: 20px 0 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+article .business .businessList h3 strong {
+  display: block;
+  font-weight: bold;
+}
+article .business .businessList p {
+  font-size: 0.95rem;
+  color: #222;
+}
+article .more a {
+  display: block;
+  border: 1px solid #000;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  margin: 50px auto;
+  text-align: center;
+}
+article .more a:hover {
+  background-color: #000;
+  color: #fff;
+}
